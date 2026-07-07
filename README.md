@@ -1,5 +1,7 @@
 # Elev8
 
+Frontend website experiment for Elev8, a bilingual creative digital studio landing page.
+
 A responsive one-page website for Elev8, a premium creative digital studio.
 
 ## Requirements
