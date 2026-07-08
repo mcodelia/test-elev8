@@ -79,7 +79,7 @@
 .signal-node:after{content:"";background:linear-gradient(135deg,transparent 46%,currentColor 47%,currentColor 53%,transparent 54%);color:rgba(255,255,255,.55)}
 .signal-node:nth-child(4):after{color:rgba(11,11,10,.55)}
 .logic-icon-rotate{display:block;width:52px;height:52px;position:relative;color:var(--ink);font-size:0;line-height:1}
-.logic-icon-rotate::before{content:"↑";position:absolute;left:0;top:0;display:block;font-family:Arial, Helvetica, sans-serif;font-size:52px;font-weight:400;line-height:1;color:var(--ink);transform:rotate(45deg);transform-origin:center}
+.logic-icon-rotate::before{content:"↑";position:absolute;left:50%;top:50%;display:block;font-family:Arial, Helvetica, sans-serif;font-size:52px;font-weight:400;line-height:1;color:var(--ink);transform:translate(-50%,-50%) rotate(45deg);transform-origin:center}
 
 @media(max-width:640px){
   :root{--pad:24px}
