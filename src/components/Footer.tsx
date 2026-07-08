@@ -40,7 +40,7 @@ export default function Footer() {
               {footerLinks.map((link) => (
                 <a href="#" key={link}>
                   <strong>{link}</strong>
-                  <span>↗</span>
+                  <span aria-hidden="true" />
                 </a>
               ))}
             </nav>

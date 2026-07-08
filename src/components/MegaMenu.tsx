@@ -27,7 +27,7 @@ export default function MegaMenu({ menu }: { menu: MegaMenuData }) {
         <div className="mega-list">
           {menu.links.map((link) => (
             <a href={link.href} key={link.href}>
-              {link.label} <span>↗</span>
+              {link.label} <span aria-hidden="true" />
             </a>
           ))}
         </div>

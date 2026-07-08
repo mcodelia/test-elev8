@@ -18,7 +18,7 @@ const focusSteps = [
     text: "Creamos una experiencia clara, consistente y lista para representar mejor al negocio.",
   },
   {
-    icon: "↗",
+    icon: "↑",
     title: "Ejecución",
     text: "Coordinamos la implementación para que la idea llegue bien a pantalla, papel, espacio o sistema.",
   },
@@ -248,9 +248,7 @@ export default function Home() {
                   <span className="num">{service.label}</span>
                   <h3>{service.title}</h3>
                   <p>{service.text}</p>
-                  <span className="arrow" aria-hidden="true">
-                    ↗
-                  </span>
+                  <span className="arrow" aria-hidden="true" />
                 </article>
               ))}
             </div>
@@ -293,7 +291,7 @@ export default function Home() {
                   <p>{route.text}</p>
                   <div className="offer-action">
                     <span>{route.action}</span>
-                    <span aria-hidden="true">↗</span>
+                    <span aria-hidden="true" />
                   </div>
                 </article>
               ))}

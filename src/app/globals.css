@@ -71,6 +71,13 @@
 .offer-action span:last-child::after{content:"";position:absolute;right:1px;top:1px;width:20px;height:2px;background:var(--ink);transform:rotate(-45deg);transform-origin:right center}
 .offer-feature .offer-action span:last-child::before{border-color:#fff}
 .offer-feature .offer-action span:last-child::after{background:#fff}
+.mega-list a span{position:relative;width:16px;height:16px;flex:0 0 16px;overflow:hidden;color:transparent;font-size:0}
+.mega-list a span::before{content:"";position:absolute;right:1px;top:1px;width:12px;height:12px;border-top:2px solid #8f887e;border-right:2px solid #8f887e}
+.mega-list a span::after{content:"";position:absolute;right:1px;top:1px;width:18px;height:2px;background:#8f887e;transform:rotate(-45deg);transform-origin:right center}
+.mega-list a:hover span::before{border-color:var(--acid)}
+.mega-list a:hover span::after{background:var(--acid)}
+.signal-node:after{content:"";background:linear-gradient(135deg,transparent 46%,currentColor 47%,currentColor 53%,transparent 54%);color:rgba(255,255,255,.55)}
+.signal-node:nth-child(4):after{color:rgba(11,11,10,.55)}
 
 @media(max-width:640px){
   :root{--pad:24px}
