@@ -55,3 +55,62 @@
 .route-left .eyebrow{color:#bdbdb5}
 .route-left p{color:#c9c9c1;margin-top:22px}
 .footer h3{margin:0 0 38px;font-size:34px;letter-spacing:-.05em;color:#fff}
+
+.footer-index a span{position:relative;width:18px;height:18px;flex:0 0 18px;overflow:hidden;color:transparent;font-size:0}
+.footer-index a span::before{content:"";position:absolute;right:1px;top:1px;width:14px;height:14px;border-top:2px solid currentColor;border-right:2px solid currentColor;color:#8f887e}
+.footer-index a span::after{content:"";position:absolute;right:1px;top:1px;width:20px;height:2px;background:#8f887e;transform:rotate(-45deg);transform-origin:right center}
+.footer-index a:hover span::before{color:var(--paper)}
+.footer-index a:hover span::after{background:var(--paper);transform:rotate(-45deg) translateX(4px)}
+.arrow{position:relative;color:transparent;font-size:0}
+.arrow::before{content:"";position:absolute;right:18px;top:17px;width:14px;height:14px;border-top:2px solid #bdb5a7;border-right:2px solid #bdb5a7}
+.arrow::after{content:"";position:absolute;right:18px;top:17px;width:21px;height:2px;background:#bdb5a7;transform:rotate(-45deg);transform-origin:right center}
+.service:hover .arrow::before{border-color:var(--ink)}
+.service:hover .arrow::after{background:var(--ink)}
+.offer-action span:last-child{position:relative;width:18px;height:18px;flex:0 0 18px;overflow:hidden;color:transparent;font-size:0}
+.offer-action span:last-child::before{content:"";position:absolute;right:1px;top:1px;width:14px;height:14px;border-top:2px solid var(--ink);border-right:2px solid var(--ink)}
+.offer-action span:last-child::after{content:"";position:absolute;right:1px;top:1px;width:20px;height:2px;background:var(--ink);transform:rotate(-45deg);transform-origin:right center}
+.offer-feature .offer-action span:last-child::before{border-color:#fff}
+.offer-feature .offer-action span:last-child::after{background:#fff}
+
+@media(max-width:640px){
+  :root{--pad:24px}
+  section{padding:64px 0}
+  .navin{height:72px;gap:18px}
+  .logo{font-size:34px}
+  .nav .btn{padding:12px 16px;font-size:11px;letter-spacing:.12em;white-space:nowrap}
+  .hero{padding:28px 0 18px}
+  .hero-main{border-radius:22px;padding:28px;min-height:540px}
+  .hero-main:before{inset:16px;border-radius:18px}
+  h1{font-size:clamp(54px,17vw,70px);line-height:.8;margin:34px 0 28px}
+  .hero-copy{gap:20px}
+  .hero-copy strong{font-size:clamp(28px,8vw,36px)}
+  .poster{min-height:330px;border-radius:22px}
+  .mini-card{border-radius:22px;min-height:210px}
+  .section-head{gap:22px;margin-bottom:34px}
+  h2{font-size:clamp(44px,13vw,62px);line-height:.88}
+  .lead{font-size:clamp(22px,7vw,30px)}
+  .logic-card{border-radius:22px;min-height:190px}
+  .service{gap:14px;padding:28px 0}
+  .service h3{font-size:clamp(38px,12vw,58px)}
+  .arrow{width:48px;height:48px}
+  .arrow::before{right:16px;top:15px}
+  .arrow::after{right:16px;top:15px}
+  .offer-card{border-radius:22px}
+  .route-left{border-radius:24px;padding:28px}
+  .q{gap:14px;padding:24px 0}
+  .q strong{font-size:clamp(25px,7vw,34px);line-height:1}
+  .signal-board{border-radius:26px}
+  .signal-board:before{inset:16px;border-radius:20px}
+  .signal-node{border-radius:22px;padding:24px}
+  .footer{padding:72px 0 38px;margin-top:64px}
+  .footer h2{font-size:clamp(52px,16vw,76px);line-height:.86}
+  .footer-grid{gap:54px;margin-top:54px;padding-top:44px}
+  .footer-note{min-height:auto;gap:28px}
+  .footer h3{font-size:clamp(44px,14vw,64px);line-height:.92;letter-spacing:-.07em;margin-bottom:34px}
+  .footer-index{grid-template-columns:1fr;row-gap:0}
+  .footer-index a{padding:24px 0;font-size:clamp(28px,9.5vw,42px);line-height:.96;letter-spacing:-.055em}
+  .footer-index a strong{max-width:72%;font-weight:800}
+  .footer-index a span{width:22px;height:22px;flex-basis:22px}
+  .footer-index a span::before{width:18px;height:18px;border-width:2px}
+  .footer-index a span::after{width:26px;height:2px}
+}
