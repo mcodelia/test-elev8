@@ -18,7 +18,8 @@ const focusSteps = [
     text: "Creamos una experiencia clara, consistente y lista para representar mejor al negocio.",
   },
   {
-    icon: "↑",
+    icon: "",
+    diagonalIcon: true,
     title: "Ejecución",
     text: "Coordinamos la implementación para que la idea llegue bien a pantalla, papel, espacio o sistema.",
   },
@@ -221,7 +222,12 @@ export default function Home() {
               {focusSteps.map((step) => (
                 <article className="logic-card" key={step.title}>
                   <span className="slash">/</span>
-                  <b>{step.icon}</b>
+                  <b
+                    className={step.diagonalIcon ? "logic-arrow" : undefined}
+                    aria-hidden={step.diagonalIcon ? "true" : undefined}
+                  >
+                    {step.icon}
+                  </b>
                   <div>
                     <h3>{step.title}</h3>
                     <p>{step.text}</p>
