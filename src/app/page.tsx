@@ -19,7 +19,7 @@ const focusSteps = [
   },
   {
     icon: "",
-    diagonalIcon: true,
+    rotateIcon: true,
     title: "Ejecución",
     text: "Coordinamos la implementación para que la idea llegue bien a pantalla, papel, espacio o sistema.",
   },
@@ -223,8 +223,8 @@ export default function Home() {
                 <article className="logic-card" key={step.title}>
                   <span className="slash">/</span>
                   <b
-                    className={step.diagonalIcon ? "logic-arrow" : undefined}
-                    aria-hidden={step.diagonalIcon ? "true" : undefined}
+                    className={step.rotateIcon ? "logic-icon-rotate" : undefined}
+                    aria-hidden={step.rotateIcon ? "true" : undefined}
                   >
                     {step.icon}
                   </b>
