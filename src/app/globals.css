@@ -666,3 +666,279 @@
   .footer-index a span::before{width:18px;height:18px;border-width:2px}
   .footer-index a span::after{width:26px;height:2px}
 }
+
+/* Reparación responsive general */
+h1,h2,h3,
+.services-title,
+.solutions-page .solutions-title,
+.resources-page .resources-title,
+.company-page .company-title,
+.contact-page .contact-title,
+.service h3,
+.capability-row h3,
+.solutions-page .solution-row h3,
+.resources-page .hub-row h3,
+.footer h2,
+.footer h3{overflow-wrap:anywhere}
+
+.hero-main,
+.services-hero-main,
+.solutions-page .solutions-hero-main,
+.resources-page .resources-hero-main,
+.company-page .company-hero-main,
+.contact-page .contact-hero-main,
+.services-panel,
+.solutions-page .solutions-panel,
+.resources-page .resources-panel,
+.company-page .company-side,
+.contact-page .contact-panel,
+.offer-card,
+.solutions-page .outcome-card,
+.resources-page .topic-card{min-width:0}
+
+@media(max-width:1180px){
+  .hero-grid,
+  .services-hero-grid,
+  .solutions-page .solutions-hero-grid,
+  .resources-page .resources-hero-grid,
+  .company-page .company-hero-grid,
+  .contact-page .contact-hero-grid{grid-template-columns:1fr;min-height:auto}
+
+  .hero-main,
+  .services-hero-main,
+  .solutions-page .solutions-hero-main,
+  .resources-page .resources-hero-main,
+  .company-page .company-hero-main,
+  .contact-page .contact-hero-main,
+  .services-panel,
+  .solutions-page .solutions-panel,
+  .resources-page .resources-panel,
+  .company-page .company-side,
+  .contact-page .contact-panel{min-height:auto}
+
+  .side{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .logic{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .offer-board,
+  .solutions-page .outcome-board,
+  .resources-page .topic-board{grid-template-columns:1fr}
+  .offer-feature,
+  .solutions-page .outcome-feature,
+  .resources-page .topic-feature{grid-row:auto;min-height:260px}
+  .detail-grid,
+  .contact-page .route-board{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:980px){
+  .hero-copy,
+  .services-intro,
+  .solutions-page .solutions-intro,
+  .resources-page .resources-intro,
+  .company-page .company-intro,
+  .contact-page .contact-intro,
+  .section-head,
+  .service-cta,
+  .solutions-page .solution-cta,
+  .resources-page .resource-cta,
+  .company-page .contact-simple,
+  .contact-page .final-cta,
+  .contact-page .project-form-wrap{grid-template-columns:1fr}
+
+  .hero-main,
+  .services-hero-main,
+  .solutions-page .solutions-hero-main,
+  .resources-page .resources-hero-main,
+  .company-page .company-hero-main,
+  .contact-page .contact-hero-main{min-height:auto}
+
+  .side{grid-template-columns:1fr}
+  .logic{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .logic-card:nth-child(even){transform:none}
+  .poster{min-height:320px}
+  .service{grid-template-columns:1fr;align-items:start}
+  .arrow{justify-self:start}
+  .matrix,
+  .track,
+  .route,
+  .campaign,
+  .build-system,
+  .solutions-page .fit-layout,
+  .solutions-page .method-system,
+  .resources-page .architecture,
+  .company-page .split,
+  .contact-page .split{grid-template-columns:1fr}
+
+  .route-left,
+  .build-left,
+  .solutions-page .fit-left,
+  .solutions-page .method-left,
+  .resources-page .architecture-left,
+  .company-page .split-label,
+  .contact-page .split-label,
+  .contact-page .form-copy{position:relative;top:0}
+
+  .route-cards,
+  .detail-grid,
+  .combo-grid,
+  .solutions-page .system-grid,
+  .resources-page .calendar-grid,
+  .resources-page .seo-board,
+  .contact-page .route-board{grid-template-columns:1fr}
+
+  .capability-row,
+  .solutions-page .solution-row,
+  .resources-page .hub-row,
+  .resources-page .intent,
+  .build-step,
+  .solutions-page .method-step,
+  .company-page .simple-row,
+  .company-page .process-line,
+  .contact-page .step-row,
+  .contact-page .faq-item{grid-template-columns:1fr}
+
+  .capability-row p,
+  .capability-tags,
+  .circle-link,
+  .solutions-page .solution-row p,
+  .solutions-page .solution-tags,
+  .resources-page .hub-row p,
+  .resources-page .hub-tags{grid-column:auto}
+
+  .circle-link{justify-self:start}
+  .panel-note,
+  .solutions-page .solutions-panel-note,
+  .resources-page .resources-panel-note,
+  .company-page .side-foot,
+  .contact-page .panel-bottom,
+  .contact-page .form-head,
+  .contact-page .form-actions{display:flex;flex-direction:column;align-items:flex-start}
+
+  .cta-actions,
+  .company-page .contact-actions,
+  .contact-page .direct-actions{justify-content:flex-start}
+}
+
+@media(max-width:760px){
+  .offer-card:before,
+  .solutions-page .outcome-card:before,
+  .resources-page .topic-card:before{position:relative;right:auto;top:auto;display:inline-flex;width:max-content;max-width:100%;align-self:flex-start;margin:0 0 22px;z-index:2}
+
+  .services-panel:after,
+  .route-card.featured:after,
+  .solutions-page .ghost-mark,
+  .resources-page .big-word,
+  .contact-page .route-card:before,
+  .signal-board:after{display:none}
+
+  .radar-item,
+  .solutions-page .solutions-radar-item,
+  .resources-page .resources-radar-item{grid-template-columns:48px minmax(0,1fr) 22px}
+
+  .radar-num,
+  .solutions-page .solutions-radar-num,
+  .resources-page .resources-radar-num{width:48px;height:44px}
+
+  .radar-item h3,
+  .solutions-page .solutions-radar-item h3,
+  .resources-page .resources-radar-item h3{font-size:clamp(20px,6vw,30px)}
+
+  .offer-card,
+  .solutions-page .outcome-card,
+  .resources-page .topic-card,
+  .route-card,
+  .detail-card,
+  .contact-page .route-card{min-height:auto;gap:22px}
+
+  .offer-card h3,
+  .solutions-page .outcome-card h3,
+  .resources-page .topic-card h3,
+  .route-card h3,
+  .contact-page .route-card h3{font-size:clamp(25px,7.2vw,36px);line-height:.92;letter-spacing:-.065em;margin-top:0}
+
+  .track,
+  .q,
+  .resources-page .intent,
+  .contact-page .form-points div{grid-template-columns:1fr}
+
+  .footer-index a strong{max-width:none}
+}
+
+@media(max-width:520px){
+  :root{--pad:20px}
+  section{padding:56px 0}
+  .navin{height:auto;min-height:70px;padding-top:12px;padding-bottom:12px;gap:14px}
+  .logo{font-size:32px}
+  .nav .btn{max-width:62vw;padding:11px 14px;font-size:10px;letter-spacing:.1em;text-align:center;white-space:normal;line-height:1.15}
+
+  .hero-main,
+  .services-hero-main,
+  .solutions-page .solutions-hero-main,
+  .resources-page .resources-hero-main,
+  .company-page .company-hero-main,
+  .contact-page .contact-hero-main,
+  .services-panel,
+  .solutions-page .solutions-panel,
+  .resources-page .resources-panel,
+  .company-page .company-side,
+  .contact-page .contact-panel,
+  .poster,
+  .mini-card,
+  .route-left,
+  .solutions-page .fit-left,
+  .resources-page .architecture-left,
+  .signal-board,
+  .combination-board,
+  .solutions-page .system-board,
+  .resources-page .calendar-board,
+  .contact-page .project-form{border-radius:20px;padding:22px}
+
+  .hero-main:before,
+  .services-hero-main:before,
+  .solutions-page .solutions-hero-main:before,
+  .resources-page .resources-hero-main:before,
+  .company-page .company-hero-main:before,
+  .contact-page .contact-hero-main:before,
+  .services-panel:before,
+  .solutions-page .solutions-panel:before,
+  .resources-page .resources-panel:before,
+  .company-page .company-side:before,
+  .contact-page .contact-panel:before,
+  .signal-board:before,
+  .combination-board:before,
+  .solutions-page .system-board:before,
+  .resources-page .calendar-board:before{inset:14px;border-radius:16px}
+
+  h1,
+  .services-title,
+  .solutions-page .solutions-title,
+  .resources-page .resources-title,
+  .company-page .company-title,
+  .contact-page .contact-title{font-size:clamp(36px,11.2vw,46px);line-height:.92;letter-spacing:-.064em;margin:28px 0 22px;max-width:100%}
+
+  .solutions-page .solutions-title em,
+  .resources-page .resources-title em,
+  .company-page .company-title em,
+  .contact-page .contact-title em{display:inline;overflow-wrap:anywhere;word-break:break-word}
+
+  h2,
+  .company-page h2,
+  .contact-page h2{font-size:clamp(32px,10vw,46px);line-height:.94;letter-spacing:-.068em}
+
+  .lead,
+  .hero-copy strong,
+  .services-intro strong,
+  .solutions-page .solutions-intro strong,
+  .resources-page .resources-intro strong,
+  .company-page .company-intro strong,
+  .contact-page .contact-intro strong{font-size:clamp(19px,6vw,25px);line-height:1.14}
+
+  .logic{grid-template-columns:1fr}
+  .logic-card{min-height:0}
+  .logic-icon-rotate,
+  .logic-icon-rotate::before{width:42px;height:42px;font-size:42px}
+
+  .field-grid,
+  .contact-page .field-grid{grid-template-columns:1fr}
+  .btn,
+  .contact-page .form-actions .btn,
+  .panel-cta{width:100%}
+}
