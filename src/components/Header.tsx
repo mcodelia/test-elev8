@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 import MegaMenu, { type MegaMenuData } from "./MegaMenu";
 
 const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
   {
-    href: "/servicios.html",
+    href: "/servicios",
     label: "Servicios",
     menu: {
       kicker: "Qué hacemos",
@@ -20,11 +22,11 @@ const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
       cardText:
         "Parte por el problema. Elev8 define la ruta correcta antes de diseñar o construir.",
       cardCta: "Ver rutas",
-      cardHref: "/servicios.html",
+      cardHref: "/servicios",
     },
   },
   {
-    href: "/soluciones.html",
+    href: "/soluciones",
     label: "Soluciones",
     menu: {
       kicker: "Por necesidad",
@@ -42,65 +44,68 @@ const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
       cardText:
         "Marca, web, tecnología y experiencia física trabajando bajo una misma dirección.",
       cardCta: "Iniciar",
-      cardHref: "/contacto.html",
+      cardHref: "/contacto",
     },
   },
   {
-    href: "/recursos.html",
+    href: "/recursos",
     label: "Recursos",
     menu: {
       kicker: "Aprender y decidir",
       title: "Contenido para tomar mejores decisiones.",
       description:
-        "Espacio para casos, guías, antes/después, diagnósticos y publicaciones de autoridad.",
+        "Espacio para casos, diagnósticos, guías y artículos pensados para atraer búsquedas con intención real.",
       links: [
-        { href: "/recursos/casos.html", label: "Casos de transformación" },
+        { href: "/recursos/casos-de-exito.html", label: "Casos de éxito" },
         { href: "/recursos/diagnosticos.html", label: "Diagnósticos" },
-        { href: "/recursos/guias.html", label: "Guías y recursos" },
-        { href: "/recursos/ideas.html", label: "Ideas con punto de vista" },
+        { href: "/recursos/guias.html", label: "Guías" },
+        { href: "/recursos/blog.html", label: "Blog" },
       ],
-      cardTitle: "Contenido con criterio",
+      cardTitle: "SEO con criterio",
       cardText:
-        "No publicar por publicar. Mostrar problemas reales y abrir conversaciones útiles.",
-      cardCta: "Ver estrategia",
-      cardHref: "/recursos.html",
+        "No escribir por escribir. Crear contenido que eduque, posicione y abra conversaciones comerciales.",
+      cardCta: "Ver recursos",
+      cardHref: "/recursos",
     },
   },
   {
-    href: "/empresa.html",
+    href: "/empresa",
     label: "Empresa",
     menu: {
       kicker: "Elev8",
       title: "Una puerta de entrada para construir con dirección.",
       description:
-        "Conoce el enfoque, el proceso y la forma de trabajo detrás de cada proyecto.",
+        "Conoce quiénes somos, cómo pensamos, cómo trabajamos y cómo iniciar un proyecto.",
       links: [
-        { href: "/empresa/enfoque.html", label: "Enfoque" },
-        { href: "/empresa/proceso.html", label: "Proceso de entrada" },
-        { href: "/servicios.html", label: "Capacidades" },
-        { href: "/contacto.html", label: "Contacto" },
+        { href: "/empresa#nosotros", label: "Nosotros" },
+        { href: "/empresa#enfoque", label: "Enfoque" },
+        { href: "/empresa#proceso", label: "Nuestro proceso" },
+        { href: "/contacto", label: "Contacto" },
       ],
       cardTitle: "Hablemos del próximo paso.",
       cardText:
         "Cuéntanos qué necesitas resolver y te ayudamos a ordenar la ruta.",
       cardCta: "Contacto",
-      cardHref: "/contacto.html",
+      cardHref: "/contacto",
     },
   },
 ];
 
-export default function Header() {
+export default function Header({ active }: { active?: string }) {
   return (
     <nav className="nav">
       <div className="wrap navin">
-        <a className="logo" href="#" aria-label="Elev8 inicio">
+        <Link className="logo" href="/" aria-label="Elev8 inicio">
           elev8
-        </a>
+        </Link>
 
         <div className="links" aria-label="Navegación principal">
           {navItems.map((item) => (
             <div className="nav-item" key={item.label}>
-              <a className="nav-trigger" href={item.href}>
+              <a
+                className={`nav-trigger${active === item.label ? " active" : ""}`}
+                href={item.href}
+              >
                 {item.label}
               </a>
               <MegaMenu menu={item.menu} />
@@ -108,7 +113,7 @@ export default function Header() {
           ))}
         </div>
 
-        <a href="/contacto.html" className="btn">
+        <a href="/contacto" className="btn">
           Iniciar un proyecto
         </a>
       </div>
