@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 import MegaMenu, { type MegaMenuData } from "./MegaMenu";
@@ -92,10 +95,13 @@ const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
 ];
 
 export default function Header({ active }: { active?: string }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <nav className="nav">
+    <nav className={`nav${isMenuOpen ? " menu-open" : ""}`}>
       <div className="wrap navin">
-        <Link className="logo" href="/" aria-label="Elev8 inicio">
+        <Link className="logo" href="/" aria-label="Elev8 inicio" onClick={closeMenu}>
           elev8
         </Link>
 
@@ -113,9 +119,47 @@ export default function Header({ active }: { active?: string }) {
           ))}
         </div>
 
-        <a href="/contacto" className="btn">
+        <a href="/contacto" className="btn nav-cta">
           Iniciar un proyecto
         </a>
+
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-controls="mobile-menu"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+        </button>
+      </div>
+
+      <div className={`mobile-menu${isMenuOpen ? " open" : ""}`} id="mobile-menu">
+        <div className="mobile-menu-inner">
+          {navItems.map((item) => (
+            <div className="mobile-menu-group" key={item.label}>
+              <a
+                className={`mobile-menu-link${active === item.label ? " active" : ""}`}
+                href={item.href}
+                onClick={closeMenu}
+              >
+                {item.label}
+              </a>
+              <div className="mobile-submenu">
+                {item.menu.links.map((link) => (
+                  <a href={link.href} key={link.href} onClick={closeMenu}>
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+          <a className="btn mobile-menu-cta" href="/contacto" onClick={closeMenu}>
+            Iniciar un proyecto
+          </a>
+        </div>
       </div>
     </nav>
   );
