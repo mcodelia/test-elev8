@@ -11,6 +11,15 @@ const footerLinks = [
   "Necesito una solución integral",
 ];
 
+function projectMailto(projectType: string) {
+  const subject = encodeURIComponent(`Proyecto Elev8: ${projectType}`);
+  const body = encodeURIComponent(
+    `Hola Elev8,\n\nQuiero conversar sobre: ${projectType}.\n\nContexto del proyecto:\n\nNombre:\nEmpresa:\nPlazo ideal:\n\nGracias.`,
+  );
+
+  return `mailto:hello@elev8.cl?subject=${subject}&body=${body}`;
+}
+
 export default function Footer() {
   const { t } = useLanguage();
 
@@ -22,7 +31,10 @@ export default function Footer() {
           <br />
           {t("crea sistemas que elevan negocios.")}
         </h2>
-        <a className="btn footer-cta" href="mailto:hello@elev8.cl">
+        <a
+          className="btn footer-cta"
+          href="mailto:hello@elev8.cl?subject=Nuevo%20proyecto%20para%20Elev8"
+        >
           {t("Hablemos del próximo proyecto")}
         </a>
 
@@ -44,7 +56,7 @@ export default function Footer() {
             <h3>{t("¿Qué necesitas resolver?")}</h3>
             <nav className="footer-index" aria-label={t("Accesos rápidos")}>
               {footerLinks.map((link) => (
-                <a href="#" key={link}>
+                <a href={projectMailto(t(link))} key={link}>
                   <strong>{t(link)}</strong>
                   <span aria-hidden="true" />
                 </a>

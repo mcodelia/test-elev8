@@ -193,7 +193,7 @@ export default function ContactoPage() {
 
             <form
               className="project-form"
-              action="mailto:hello@elev8.cl"
+              action="mailto:hello@elev8.cl?subject=Solicitud%20de%20proyecto%20Elev8"
               method="post"
               encType="text/plain"
             >
@@ -383,7 +383,7 @@ export default function ContactoPage() {
                 <div className="direct-actions">
                   <a
                     className="btn dark-btn"
-                    href="mailto:hello@elev8.cl?subject=Nuevo proyecto para Elev8"
+                    href="mailto:hello@elev8.cl?subject=Nuevo%20proyecto%20para%20Elev8"
                   >
                     Escribir a Elev8
                   </a>

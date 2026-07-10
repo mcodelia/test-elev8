@@ -5,28 +5,28 @@ const focusSteps = [
   {
     icon: "↓",
     title: "Diagnóstico",
-    text: "Detectamos qué está frenando la percepción, la venta o la operación del negocio.",
+    text: "Encontramos el bloqueo real.",
   },
   {
     icon: "→",
     title: "Dirección",
-    text: "Elegimos el camino correcto: marca, web, tecnología, espacio físico o una solución integrada.",
+    text: "Definimos qué mover primero.",
   },
   {
     icon: "✦",
     title: "Diseño",
-    text: "Creamos una experiencia clara, consistente y lista para representar mejor al negocio.",
+    text: "Damos forma a la decisión.",
   },
   {
     icon: "",
     rotateIcon: true,
     title: "Ejecución",
-    text: "Coordinamos la implementación para que la idea llegue bien a pantalla, papel, espacio o sistema.",
+    text: "Llevamos la idea al mundo.",
   },
   {
     icon: "∞",
     title: "Evolución",
-    text: "Ajustamos, mejoramos y escalamos lo construido según nuevos objetivos y oportunidades.",
+    text: "Dejamos una base para crecer.",
   },
 ];
 
@@ -34,27 +34,32 @@ const services = [
   {
     label: "Estrategia",
     title: "Estrategia y crecimiento",
-    text: "Diagnóstico, posicionamiento, auditorías, roadmap digital y decisiones estratégicas antes de diseñar o construir.",
+    text: "Dirección antes de producir.",
+    href: "/servicios/strategy-growth.html",
   },
   {
     label: "Marca",
     title: "Marca y creatividad",
-    text: "Identidad visual, dirección de arte, contenido, presentaciones, campañas y sistemas gráficos memorables.",
+    text: "Percepción clara y reconocible.",
+    href: "/servicios/brand-creative.html",
   },
   {
     label: "Digital",
     title: "Experiencias digitales",
-    text: "Sitios web, páginas de aterrizaje, comercio electrónico, experiencia de usuario, plataformas, paneles y experiencias digitales de alto estándar.",
+    text: "Sitios y productos que orientan.",
+    href: "/servicios/digital-experiences.html",
   },
   {
     label: "Inteligencia",
     title: "Soluciones inteligentes",
-    text: "Automatización, inteligencia artificial, integraciones, sistemas internos, gestión comercial, aplicaciones y sistemas a medida.",
+    text: "Menos fricción. Más sistema.",
+    href: "/servicios/smart-solutions.html",
   },
   {
     label: "Físico",
     title: "Marca física",
-    text: "Letreros, gráfica vehicular, acrílicos, señalética, impresión, oficinas, stands e implementación visual.",
+    text: "La marca fuera de la pantalla.",
+    href: "/servicios/physical-brand.html",
   },
 ];
 
@@ -63,37 +68,37 @@ const solutionRoutes = [
     step: "Lanzar",
     title: "Ruta Lanzamiento",
     chips: ["Marca", "Web", "Contenido"],
-    text: "Para negocios que necesitan salir al mercado con una identidad clara, presencia digital y material comercial listo para vender.",
-    action: "Crear desde cero",
+    text: "Para salir al mercado con claridad.",
+    action: "Descubrir ruta",
   },
   {
     step: "Mejorar",
     title: "Ruta evolución",
     chips: ["Reposicionamiento", "Experiencia", "Ventas"],
-    text: "Para empresas que ya funcionan, pero necesitan verse más profesionales, actuales y alineadas al nivel de lo que ofrecen.",
-    action: "Elevar percepción",
+    text: "Para verse al nivel de lo que ya eres.",
+    action: "Explorar ruta",
   },
   {
     step: "Integrar",
     title: "Ruta 360",
     chips: ["Estrategia", "Marca", "Web", "Inteligencia", "Físico"],
-    text: "Para empresas que quieren ordenar todo el ecosistema: cómo se ven, cómo comunican, cómo venden, cómo operan y cómo se viven en el mundo físico.",
-    action: "Construir el sistema completo",
+    text: "Para ordenar marca, web, operación y experiencia.",
+    action: "Ver solución",
     featured: true,
   },
   {
     step: "Optimizar",
     title: "Ruta inteligente",
     chips: ["IA", "Automatización", "Sistemas"],
-    text: "Para equipos que quieren reducir trabajo manual, conectar herramientas, implementar IA y operar con sistemas más inteligentes.",
-    action: "Optimizar operación",
+    text: "Para equipos que necesitan trabajar mejor.",
+    action: "Conocer ruta",
   },
   {
     step: "Materializar",
     title: "Ruta Espacio",
     chips: ["Letreros", "Oficinas", "Vehículos"],
-    text: "Para marcas que necesitan verse bien en oficinas, locales, vehículos, ferias, puntos de venta o cualquier superficie real.",
-    action: "Materializar la marca",
+    text: "Para hacer visible la marca en el mundo real.",
+    action: "Explorar ruta",
   },
 ];
 
@@ -108,24 +113,24 @@ const clientNeeds = [
 
 const marketingSignals = [
   {
-    label: "SEÑAL 01",
-    title: "Ideas con punto de vista",
-    text: "Publicaciones que muestran cómo detectar una marca débil, una web que no convierte o una experiencia mal resuelta.",
+    label: "Decisión 01",
+    title: "Detectar",
+    text: "Qué no está funcionando.",
   },
   {
-    label: "SEÑAL 02",
-    title: "Transformaciones visibles",
-    text: "Antes y después con contexto: qué se corrigió, por qué importaba y cómo cambió la percepción o el resultado.",
+    label: "Decisión 02",
+    title: "Priorizar",
+    text: "Qué cambia primero.",
   },
   {
-    label: "SEÑAL 03",
-    title: "Campañas por necesidad",
-    text: "Mensajes separados para clientes que quieren lanzar, mejorar, automatizar, implementar o transformar todo su ecosistema.",
+    label: "Decisión 03",
+    title: "Construir",
+    text: "Qué pieza mueve el negocio.",
   },
   {
-    label: "SEÑAL 04",
-    title: "Diagnóstico inicial",
-    text: "Una primera revisión para mostrar oportunidades concretas y convertir el interés en una conversación seria.",
+    label: "Decisión 04",
+    title: "Avanzar",
+    text: "Cuál es el próximo paso.",
   },
 ];
 
@@ -160,16 +165,15 @@ export default function Home() {
             <div className="hero-main">
               <div>
                 <div className="kicker">Ecosistema creativo y digital</div>
-                <h1>Una sola visión para elevar marcas, productos y experiencias.</h1>
+                <h1>Conectamos estrategia, creatividad y tecnología para construir empresas más sólidas.</h1>
               </div>
               <div className="hero-copy">
                 <strong>
-                  Estrategia, diseño y ejecución trabajando como un solo sistema.
+                  Elev8 existe para convertir complejidad en dirección.
                 </strong>
                 <p>
-                  Elev8 acompaña a empresas que quieren verse mejor, operar con
-                  más claridad y construir experiencias consistentes en lo
-                  digital, lo visual y lo físico.
+                  Un estudio para marcas que necesitan claridad, criterio y ejecución
+                  en un mismo lugar.
                 </p>
               </div>
             </div>
@@ -189,10 +193,10 @@ export default function Home() {
               </div>
               <div className="mini-card">
                 <p>
-                  Un punto de entrada para convertir ideas, marcas y necesidades
-                  operativas en soluciones visibles, funcionales y bien ejecutadas.
+                  Una entrada para ordenar lo visual, lo digital, lo operativo y
+                  lo físico bajo una misma intención.
                 </p>
-                <h3>One team.</h3>
+                <h3>Una dirección.</h3>
               </div>
             </div>
           </div>
@@ -200,10 +204,9 @@ export default function Home() {
 
         <div className="ticker" aria-hidden="true">
           <span>
-            Estrategia y crecimiento — Marca y creatividad — Experiencias digitales —
-            Soluciones inteligentes — Marca física — Estrategia y crecimiento — Marca
-            y creatividad — Experiencias digitales — Soluciones inteligentes —
-            Marca Física —
+            Pensar antes de producir — Diseñar para decidir — Construir sistemas —
+            Reducir fricción — Elevar percepción — Crear continuidad — Pensar antes de producir —
+            Diseñar para decidir — Construir sistemas — Reducir fricción —
           </span>
         </div>
 
@@ -211,11 +214,10 @@ export default function Home() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Enfoque"
-              title="Primero entendemos el problema. Después diseñamos la ruta."
+              title="Primero el problema. Luego la forma."
             >
-              Cada proyecto parte desde una necesidad concreta: lanzar, ordenar,
-              vender, automatizar o materializar una marca. Desde ahí definimos
-              el camino correcto.
+              El método debe entenderse en segundos. Mirar, ordenar, construir,
+              mejorar.
             </SectionHeading>
 
             <div className="logic">
@@ -242,10 +244,9 @@ export default function Home() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Servicios"
-              title="Cinco capacidades. Una experiencia coherente."
+              title="Un ecosistema. Cinco formas de entrar."
             >
-              Elev8 integra estrategia, diseño, tecnología y producción física
-              para resolver proyectos de forma más simple, cuidada y completa.
+              Separadas cuando conviene. Conectadas cuando el negocio lo pide.
             </SectionHeading>
 
             <div className="services">
@@ -254,7 +255,10 @@ export default function Home() {
                   <span className="num">{service.label}</span>
                   <h3>{service.title}</h3>
                   <p>{service.text}</p>
-                  <span className="arrow" aria-hidden="true" />
+                  <a className="service-cta-link" href={service.href}>
+                    Explorar
+                    <span className="arrow" aria-hidden="true" />
+                  </a>
                 </article>
               ))}
             </div>
@@ -265,11 +269,10 @@ export default function Home() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Rutas de solución"
-              title="Rutas pensadas según el momento del negocio."
+              title="Elige por dónde empezar."
             >
-              La oferta se organiza como un sistema de entrada: el cliente
-              identifica su necesidad y Elev8 traduce esa intención en una
-              solución clara.
+              Cada ruta abre una conversación distinta. Lanzar, mejorar, integrar,
+              optimizar o materializar.
             </SectionHeading>
 
             <div className="offer-board">
@@ -309,10 +312,9 @@ export default function Home() {
           <div className="wrap route">
             <div className="route-left">
               <div className="eyebrow">Necesidades del cliente</div>
-              <h2>Cada necesidad tiene una puerta de entrada.</h2>
+              <h2>Encuentra tu puerta de entrada.</h2>
               <p>
-                Estas son las señales que ayudan a transformar una consulta
-                ambigua en una propuesta clara, útil y accionable.
+                Si reconoces una frase, ya tienes una ruta.
               </p>
             </div>
 
@@ -332,13 +334,11 @@ export default function Home() {
           <div className="wrap campaign">
             <div className="campaign-copy">
               <div>
-                <div className="eyebrow">Estrategia de marketing</div>
-                <h2>No perseguir atención. Construir deseo.</h2>
+                <div className="eyebrow">Decisiones</div>
+                <h2>Menos ruido. Mejores movimientos.</h2>
               </div>
               <p className="lead">
-                La comunicación de Elev8 debe mostrar criterio antes de vender:
-                revelar problemas que el cliente reconoce, demostrar soluciones
-                posibles y abrir conversaciones con intención.
+                Antes de producir más piezas, conviene saber qué decisión falta.
               </p>
             </div>
 

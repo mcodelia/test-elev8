@@ -144,7 +144,7 @@ export default function Header({ active }: { active?: string }) {
           ))}
         </div>
 
-        <a href={hrefForLanguage("/contacto")} className="btn nav-cta">
+        <a href={hrefForLanguage("/contacto#formulario")} className="btn nav-cta">
           {t("Iniciar un proyecto")}
         </a>
 
@@ -201,7 +201,7 @@ export default function Header({ active }: { active?: string }) {
               </div>
             </div>
           ))}
-          <a className="btn mobile-menu-cta" href={hrefForLanguage("/contacto")} onClick={closeMenu}>
+          <a className="btn mobile-menu-cta" href={hrefForLanguage("/contacto#formulario")} onClick={closeMenu}>
             {t("Iniciar un proyecto")}
           </a>
         </div>

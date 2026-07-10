@@ -65,8 +65,11 @@
 .arrow{position:relative;color:transparent;font-size:0}
 .arrow::before{content:"";position:absolute;right:18px;top:17px;width:14px;height:14px;border-top:2px solid #bdb5a7;border-right:2px solid #bdb5a7}
 .arrow::after{content:"";position:absolute;right:18px;top:17px;width:21px;height:2px;background:#bdb5a7;transform:rotate(-45deg);transform-origin:right center}
+.service-cta-link{display:inline-flex;align-items:center;justify-content:flex-end;gap:12px;color:var(--paper);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.service-cta-link .arrow{width:54px;height:54px;border-radius:50%;border:1px solid rgba(242,234,219,.25);display:grid;place-items:center;flex:0 0 54px}
 .service:hover .arrow::before{border-color:var(--ink)}
 .service:hover .arrow::after{background:var(--ink)}
+.service:hover .service-cta-link{color:var(--ink)}
 .offer-action span:last-child{position:relative;width:18px;height:18px;flex:0 0 18px;overflow:hidden;color:transparent;font-size:0}
 .offer-action span:last-child::before{content:"";position:absolute;right:1px;top:1px;width:14px;height:14px;border-top:2px solid var(--ink);border-right:2px solid var(--ink)}
 .offer-action span:last-child::after{content:"";position:absolute;right:1px;top:1px;width:20px;height:2px;background:var(--ink);transform:rotate(-45deg);transform-origin:right center}
@@ -496,10 +499,11 @@
 .contact-page .step-row p{font-size:15px;color:#c9c9c1;max-width:660px}
 .contact-page .route-heading{align-items:end}
 .contact-page .route-board{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,1.35vw,24px);margin-top:48px}
-.contact-page .route-card{border:1px solid var(--line);border-radius:28px;background:#fff;padding:22px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:.3s ease;box-shadow:0 18px 60px rgba(0,0,0,.035)}
+.contact-page .route-card{border:1px solid var(--line);border-radius:28px;background:#fff;padding:clamp(20px,1.7vw,28px);min-height:300px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:.3s ease;box-shadow:0 18px 60px rgba(0,0,0,.035)}
 .contact-page .route-card:hover{transform:translateY(-6px);border-color:rgba(11,11,10,.28);box-shadow:0 30px 95px rgba(0,0,0,.075)}
-.contact-page .route-card:before{content:attr(data-id);position:absolute;right:14px;top:14px;font-size:clamp(44px,4.2vw,78px);font-weight:900;letter-spacing:-.12em;color:rgba(11,11,10,.045)}
-.contact-page .route-card h3{font-size:clamp(26px,2.5vw,44px);line-height:.86;letter-spacing:-.08em;margin-top:32px}
+.contact-page .route-card:before{content:attr(data-id);position:absolute;right:16px;top:16px;font-size:clamp(32px,3vw,56px);font-weight:900;letter-spacing:-.1em;color:rgba(11,11,10,.035);z-index:0}
+.contact-page .route-card > div,.contact-page .route-card > span{position:relative;z-index:1}
+.contact-page .route-card h3{font-size:clamp(24px,1.72vw,32px);line-height:.9;letter-spacing:-.062em;margin-top:30px;max-width:100%;text-wrap:balance}
 .contact-page .route-card p{font-size:15px;margin-top:18px}
 .contact-page .route-card span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:24px}
 .contact-page .route-card span span{display:inline-block;width:14px;height:14px;position:relative;margin:0 0 0 4px;vertical-align:-1px}
@@ -1033,8 +1037,46 @@ h2,
 .solutions-page .system-node h3,
 .resources-page .calendar-node h3,
 .resources-page .seo-card h3,
-.contact-page .route-card h3,
 .contact-page .form-head h3{font-size:clamp(24px,2.35vw,38px);line-height:.92;letter-spacing:-.068em}
+
+.contact-page .route-card h3{font-size:clamp(24px,1.72vw,32px);line-height:.9;letter-spacing:-.062em}
+
+/* Evita que las etiquetas superiores invadan títulos largos en tarjetas. */
+.route-card:before,
+.offer-card:before,
+.solutions-page .outcome-card:before,
+.resources-page .topic-card:before{
+  position:relative;
+  right:auto;
+  top:auto;
+  display:inline-flex;
+  width:max-content;
+  max-width:100%;
+  align-self:flex-end;
+  margin:0 0 24px;
+  z-index:2;
+}
+
+.route-card h3,
+.offer-card h3,
+.solutions-page .outcome-card h3,
+.resources-page .topic-card h3{
+  margin-top:0;
+  max-width:100%;
+  text-wrap:balance;
+}
+
+.contact-page .route-card:before{
+  position:absolute;
+  right:16px;
+  top:16px;
+  display:block;
+  width:auto;
+  max-width:none;
+  align-self:auto;
+  margin:0;
+  z-index:0;
+}
 
 .route-left h2,
 .solutions-page .fit-left h2,

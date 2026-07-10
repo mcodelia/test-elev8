@@ -392,7 +392,7 @@ export default function ServiciosPage() {
                 </p>
               </div>
               <div className="cta-actions">
-                <a className="btn dark-btn" href="#contacto">
+                <a className="btn dark-btn" href="/contacto#formulario">
                   Iniciar proyecto
                 </a>
                 <a className="btn" href="/servicios/strategy-growth.html">

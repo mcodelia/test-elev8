@@ -206,7 +206,7 @@ export default function EmpresaPage() {
                   demasiado.
                 </p>
                 <div className="contact-actions">
-                  <a className="btn dark-btn" href="mailto:hello@elev8.cl">
+                  <a className="btn dark-btn" href="mailto:hello@elev8.cl?subject=Nuevo%20proyecto%20para%20Elev8">
                     Escribir a Elev8
                   </a>
                   <a className="btn" href="/soluciones">
@@ -215,7 +215,7 @@ export default function EmpresaPage() {
                 </div>
               </div>
               <div className="contact-info">
-                <a href="mailto:hello@elev8.cl">
+                <a href="mailto:hello@elev8.cl?subject=Nuevo%20proyecto%20para%20Elev8">
                   <small>Correo</small>
                   <span>hello@elev8.cl</span>
                 </a>

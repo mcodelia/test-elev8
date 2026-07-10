@@ -314,7 +314,7 @@ export default function RecursosPage() {
               </div>
               <div className="cta-actions">
                 <a className="btn dark-btn" href="/recursos/casos-de-exito.html">Primer recurso</a>
-                <a className="btn" href="#contacto">Iniciar proyecto</a>
+                <a className="btn" href="/contacto#formulario">Iniciar proyecto</a>
               </div>
             </div>
           </div>
