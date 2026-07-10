@@ -123,8 +123,8 @@ export default function ContactoPage() {
 
         <div className="index-strip" aria-hidden="true">
           <span>
-            Contacto — Brief inicial — Diagnóstico — Ruta correcta — Propuesta —
-            Contacto — Brief inicial — Diagnóstico — Ruta correcta — Propuesta —
+            Contacto — Contexto inicial — Diagnóstico — Ruta correcta — Propuesta —
+            Contacto — Contexto inicial — Diagnóstico — Ruta correcta — Propuesta —
           </span>
         </div>
 
@@ -173,7 +173,7 @@ export default function ContactoPage() {
         <section id="formulario">
           <div className="wrap project-form-wrap">
             <div className="form-copy">
-              <div className="eyebrow">Brief inicial</div>
+              <div className="eyebrow">Contexto inicial</div>
               <h2>Cuéntanos lo esencial.</h2>
               <p>
                 Mientras más claro sea el contexto, mejor podemos recomendar la
@@ -208,7 +208,7 @@ export default function ContactoPage() {
                   <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
                 </div>
                 <div className="field">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">Correo</label>
                   <input id="email" name="email" type="email" placeholder="nombre@empresa.com" required />
                 </div>
                 <div className="field">
@@ -394,7 +394,7 @@ export default function ContactoPage() {
               </div>
               <div className="contact-info">
                 <a href="mailto:hello@elev8.cl">
-                  <small>Email</small>
+                  <small>Correo</small>
                   <span>hello@elev8.cl</span>
                 </a>
                 <span>

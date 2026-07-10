@@ -2,11 +2,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const radarItems = [
-  ["STR", "Strategy & Growth", "/servicios/strategy-growth.html"],
-  ["BRD", "Brand & Creative", "/servicios/brand-creative.html"],
-  ["WEB", "Digital Experiences", "/servicios/digital-experiences.html"],
-  ["AI", "Smart Solutions", "/servicios/smart-solutions.html"],
-  ["PHY", "Physical Brand", "/servicios/physical-brand.html"],
+  ["EST", "Estrategia y crecimiento", "/servicios/strategy-growth.html"],
+  ["MAR", "Marca y creatividad", "/servicios/brand-creative.html"],
+  ["WEB", "Experiencias digitales", "/servicios/digital-experiences.html"],
+  ["IA", "Soluciones inteligentes", "/servicios/smart-solutions.html"],
+  ["FIS", "Marca física", "/servicios/physical-brand.html"],
 ];
 
 const routeCards = [
@@ -14,13 +14,13 @@ const routeCards = [
     route: "Crear",
     title: "Nacer bien",
     text: "Para negocios, productos o líneas nuevas que necesitan nombre, identidad, discurso, sitio web y materiales de lanzamiento.",
-    label: "Brand + Digital",
+    label: "Marca + Digital",
   },
   {
     route: "Ordenar",
     title: "Verse mejor",
     text: "Para empresas que ya venden, pero su presencia visual, comercial o digital no refleja el nivel real de lo que ofrecen.",
-    label: "Strategy + Creative",
+    label: "Estrategia + Creatividad",
   },
   {
     route: "Sistema",
@@ -33,48 +33,48 @@ const routeCards = [
     route: "Escalar",
     title: "Operar más inteligente",
     text: "Para equipos con procesos manuales, herramientas desconectadas, mucho Excel y oportunidades claras de automatización.",
-    label: "Growth + Smart",
+    label: "Crecimiento + Inteligencia",
   },
   {
     route: "Materializar",
     title: "Llevar la marca al mundo real",
     text: "Para oficinas, locales, vehículos, stands y espacios donde la marca necesita verse consistente fuera de la pantalla.",
-    label: "Creative + Physical",
+    label: "Creatividad + Físico",
   },
 ];
 
 const capabilities = [
   {
     mark: "→",
-    title: "Strategy & Growth",
+    title: "Estrategia y crecimiento",
     href: "/servicios/strategy-growth.html",
     text: "Define la dirección antes de ejecutar. Ayuda a ordenar objetivos, detectar oportunidades, priorizar acciones y construir una ruta clara de crecimiento.",
-    tags: ["Consultoría", "Diagnóstico", "Roadmap", "Transformación digital"],
+    tags: ["Consultoría", "Diagnóstico", "Hoja de ruta", "Transformación digital"],
   },
   {
     mark: "✦",
-    title: "Brand & Creative",
+    title: "Marca y creatividad",
     href: "/servicios/brand-creative.html",
     text: "Construye la percepción de la marca: cómo se ve, cómo habla, cómo presenta su valor y cómo se diferencia en cada punto de contacto.",
-    tags: ["Branding", "Naming", "Identidad", "Dirección de arte", "Presentaciones", "Contenido"],
+    tags: ["Marca", "Nombre de marca", "Identidad", "Dirección de arte", "Presentaciones", "Contenido"],
   },
   {
     mark: "⌁",
-    title: "Digital Experiences",
+    title: "Experiencias digitales",
     href: "/servicios/digital-experiences.html",
     text: "Convierte la presencia digital en una experiencia clara, rápida y orientada a objetivos: informar, vender, captar, gestionar o visualizar datos.",
-    tags: ["Sitios web", "Landing Pages", "Ecommerce", "UX/UI", "Dashboards", "Plataformas"],
+    tags: ["Sitios web", "Páginas de aterrizaje", "Comercio electrónico", "Experiencia de usuario", "Paneles", "Plataformas"],
   },
   {
     mark: "∞",
-    title: "Smart Solutions",
+    title: "Soluciones inteligentes",
     href: "/servicios/smart-solutions.html",
     text: "Integra IA, automatización y software para reducir fricción operativa, conectar herramientas y crear soluciones internas más eficientes.",
-    tags: ["IA", "Automatización", "Software", "Apps", "Integraciones", "CRM"],
+    tags: ["IA", "Automatización", "Sistemas", "Aplicaciones", "Integraciones", "Gestión comercial"],
   },
   {
     mark: "●",
-    title: "Physical Brand",
+    title: "Marca física",
     href: "/servicios/physical-brand.html",
     text: "Lleva la identidad al espacio físico con piezas, soportes y aplicaciones que hacen visible la marca en el mundo real.",
     tags: ["Letreros", "Acrílicos", "Gráfica Vehicular", "Señalética", "Oficinas", "Stands"],
@@ -83,36 +83,36 @@ const capabilities = [
 
 const details = [
   {
-    id: "STR",
-    title: "Strategy & Growth",
+    id: "EST",
+    title: "Estrategia y crecimiento",
     href: "/servicios/strategy-growth.html",
     text: "Ideal cuando todavía no está claro qué construir, qué priorizar o cómo transformar una necesidad en un plan realista.",
-    items: ["Consultoría", "Diagnóstico", "Roadmap", "Transformación digital"],
+    items: ["Consultoría", "Diagnóstico", "Hoja de ruta", "Transformación digital"],
   },
   {
-    id: "BRD",
-    title: "Brand & Creative",
+    id: "MAR",
+    title: "Marca y creatividad",
     href: "/servicios/brand-creative.html",
     text: "Para marcas que necesitan una identidad más sólida, una comunicación más profesional y un lenguaje visual consistente.",
-    items: ["Branding", "Naming", "Identidad", "Dirección de arte", "Presentaciones", "Contenido"],
+    items: ["Marca", "Nombre de marca", "Identidad", "Dirección de arte", "Presentaciones", "Contenido"],
   },
   {
     id: "WEB",
-    title: "Digital Experiences",
+    title: "Experiencias digitales",
     href: "/servicios/digital-experiences.html",
     text: "Para transformar sitios, landings, ecommerce o interfaces en experiencias digitales claras, funcionales y memorables.",
-    items: ["Sitios web", "Landing Pages", "Ecommerce", "UX/UI", "Dashboards", "Plataformas"],
+    items: ["Sitios web", "Páginas de aterrizaje", "Comercio electrónico", "Experiencia de usuario", "Paneles", "Plataformas"],
   },
   {
-    id: "AI",
-    title: "Smart Solutions",
+    id: "IA",
+    title: "Soluciones inteligentes",
     href: "/servicios/smart-solutions.html",
     text: "Para empresas que quieren trabajar con menos fricción, conectar herramientas y convertir procesos repetitivos en sistemas inteligentes.",
-    items: ["IA", "Automatización", "Software", "Apps", "Integraciones", "CRM"],
+    items: ["IA", "Automatización", "Sistemas", "Aplicaciones", "Integraciones", "Gestión comercial"],
   },
   {
-    id: "PHY",
-    title: "Physical Brand",
+    id: "FIS",
+    title: "Marca física",
     href: "/servicios/physical-brand.html",
     text: "Para que la marca no se quede atrapada en el PDF: se vea en oficinas, vehículos, señalética, stands y puntos de contacto reales.",
     items: ["Letreros", "Acrílicos", "Gráfica Vehicular", "Señalética", "Oficinas", "Stands"],
@@ -145,17 +145,17 @@ const buildSteps = [
 const combos = [
   {
     label: "Sistema de presencia",
-    title: "Brand + Digital",
+    title: "Marca + Digital",
     text: "Una identidad clara y una experiencia web que convierte esa percepción en confianza, contacto y venta.",
   },
   {
     label: "Sistema operativo",
-    title: "Growth + Smart",
+    title: "Crecimiento + Inteligencia",
     text: "Diagnóstico, roadmap, automatización e IA para ordenar procesos y liberar tiempo operativo.",
   },
   {
     label: "Sistema tangible",
-    title: "Creative + Physical",
+    title: "Creatividad + Físico",
     text: "Una marca que se siente consistente en presentaciones, contenido, oficinas, vehículos, stands y señalética.",
   },
 ];
@@ -235,9 +235,9 @@ export default function ServiciosPage() {
 
         <div className="index-strip" aria-hidden="true">
           <span>
-            Strategy & Growth — Brand & Creative — Digital Experiences — Smart
-            Solutions — Physical Brand — Strategy & Growth — Brand & Creative —
-            Digital Experiences — Smart Solutions — Physical Brand —
+            Estrategia y crecimiento — Marca y creatividad — Experiencias digitales —
+            Soluciones inteligentes — Marca física — Estrategia y crecimiento — Marca y creatividad —
+            Experiencias digitales — Soluciones inteligentes — Marca física —
           </span>
         </div>
 
@@ -387,7 +387,7 @@ export default function ServiciosPage() {
                 <p>
                   El próximo paso es profundizar cada servicio con una
                   estructura propia: problema, solución, entregables, proceso,
-                  módulos, casos potenciales, preguntas frecuentes y CTA
+                  módulos, casos potenciales, preguntas frecuentes y llamado a la acción
                   específico.
                 </p>
               </div>

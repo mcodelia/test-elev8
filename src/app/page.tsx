@@ -32,28 +32,28 @@ const focusSteps = [
 
 const services = [
   {
-    label: "Strategy",
-    title: "Strategy & Growth",
+    label: "Estrategia",
+    title: "Estrategia y crecimiento",
     text: "Diagnóstico, posicionamiento, auditorías, roadmap digital y decisiones estratégicas antes de diseñar o construir.",
   },
   {
-    label: "Brand",
-    title: "Brand & Creative",
+    label: "Marca",
+    title: "Marca y creatividad",
     text: "Identidad visual, dirección de arte, contenido, presentaciones, campañas y sistemas gráficos memorables.",
   },
   {
     label: "Digital",
-    title: "Digital Experiences",
-    text: "Sitios web, landing pages, e-commerce, UX/UI, plataformas, dashboards y experiencias digitales de alto estándar.",
+    title: "Experiencias digitales",
+    text: "Sitios web, páginas de aterrizaje, comercio electrónico, experiencia de usuario, plataformas, paneles y experiencias digitales de alto estándar.",
   },
   {
-    label: "Smart",
-    title: "Smart Solutions",
-    text: "Automatización, inteligencia artificial, integraciones, sistemas internos, CRM, apps y software a medida.",
+    label: "Inteligencia",
+    title: "Soluciones inteligentes",
+    text: "Automatización, inteligencia artificial, integraciones, sistemas internos, gestión comercial, aplicaciones y sistemas a medida.",
   },
   {
-    label: "Physical",
-    title: "Physical Brand",
+    label: "Físico",
+    title: "Marca física",
     text: "Letreros, gráfica vehicular, acrílicos, señalética, impresión, oficinas, stands e implementación visual.",
   },
 ];
@@ -68,23 +68,23 @@ const solutionRoutes = [
   },
   {
     step: "Mejorar",
-    title: "Ruta Upgrade",
-    chips: ["Rebrand", "UX", "Ventas"],
+    title: "Ruta evolución",
+    chips: ["Reposicionamiento", "Experiencia", "Ventas"],
     text: "Para empresas que ya funcionan, pero necesitan verse más profesionales, actuales y alineadas al nivel de lo que ofrecen.",
     action: "Elevar percepción",
   },
   {
     step: "Integrar",
     title: "Ruta 360",
-    chips: ["Estrategia", "Marca", "Web", "Smart", "Físico"],
+    chips: ["Estrategia", "Marca", "Web", "Inteligencia", "Físico"],
     text: "Para empresas que quieren ordenar todo el ecosistema: cómo se ven, cómo comunican, cómo venden, cómo operan y cómo se viven en el mundo físico.",
     action: "Construir el sistema completo",
     featured: true,
   },
   {
     step: "Optimizar",
-    title: "Ruta Smart",
-    chips: ["AI", "Automatización", "Software"],
+    title: "Ruta inteligente",
+    chips: ["IA", "Automatización", "Sistemas"],
     text: "Para equipos que quieren reducir trabajo manual, conectar herramientas, implementar IA y operar con sistemas más inteligentes.",
     action: "Optimizar operación",
   },
@@ -99,10 +99,10 @@ const solutionRoutes = [
 
 const clientNeeds = [
   ["Necesito crear una marca desde cero.", "Ruta Lanzamiento"],
-  ["Mi empresa se ve antigua o poco profesional.", "Ruta Upgrade"],
-  ["Necesito una página web que venda mejor.", "Digital Experiences"],
-  ["Tengo procesos manuales y mucho Excel.", "Smart Solutions"],
-  ["Necesito letreros, impresión o gráfica física.", "Physical Brand"],
+  ["Mi empresa se ve antigua o poco profesional.", "Ruta evolución"],
+  ["Necesito una página web que venda mejor.", "Experiencias digitales"],
+  ["Tengo procesos manuales y mucho Excel.", "Soluciones inteligentes"],
+  ["Necesito letreros, impresión o gráfica física.", "Marca física"],
   ["Quiero ordenar todo mi negocio visual y digitalmente.", "Ruta 360"],
 ];
 
@@ -200,9 +200,9 @@ export default function Home() {
 
         <div className="ticker" aria-hidden="true">
           <span>
-            Estrategia & Growth — Marca & Creatividad — Experiencias Digitales —
-            Soluciones Inteligentes — Marca Física — Estrategia & Growth — Marca
-            & Creatividad — Experiencias Digitales — Soluciones Inteligentes —
+            Estrategia y crecimiento — Marca y creatividad — Experiencias digitales —
+            Soluciones inteligentes — Marca física — Estrategia y crecimiento — Marca
+            y creatividad — Experiencias digitales — Soluciones inteligentes —
             Marca Física —
           </span>
         </div>

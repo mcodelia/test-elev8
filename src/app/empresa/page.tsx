@@ -216,7 +216,7 @@ export default function EmpresaPage() {
               </div>
               <div className="contact-info">
                 <a href="mailto:hello@elev8.cl">
-                  <small>Email</small>
+                  <small>Correo</small>
                   <span>hello@elev8.cl</span>
                 </a>
                 <span>

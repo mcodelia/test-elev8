@@ -5,7 +5,7 @@ const radarItems = [
   ["Start", "Lanzar un negocio", "/soluciones/lanzar-negocio.html"],
   ["Next", "Modernizar una empresa", "/soluciones/modernizar-empresa.html"],
   ["Flow", "Automatizar procesos", "/soluciones/automatizar-procesos.html"],
-  ["Space", "Renovar un espacio", "/soluciones/renovar-espacio-fisico.html"],
+  ["Espacio", "Renovar un espacio", "/soluciones/renovar-espacio-fisico.html"],
   ["360", "Proyecto 360", "/soluciones/proyecto-360.html"],
 ];
 
@@ -20,14 +20,14 @@ const outcomes = [
   {
     label: "Percepción",
     title: "Elevar cómo se ve la empresa",
-    chips: ["Brand", "Digital", "Content"],
+    chips: ["Marca", "Digital", "Contenido"],
     text: "Para que la presencia visual, comercial y digital esté a la altura de lo que la empresa realmente ofrece.",
     action: "Más valor percibido",
   },
   {
     label: "Sistema",
     title: "Construir un ecosistema completo",
-    chips: ["Estrategia", "Marca", "Web", "Smart", "Físico"],
+    chips: ["Estrategia", "Marca", "Web", "Inteligencia", "Físico"],
     text: "Para conectar todas las capas del negocio y evitar el clásico Frankenstein corporativo: logo por un lado, web por otro, procesos en Excel y el cliente mirando raro.",
     action: "Proyecto 360",
     featured: true,
@@ -35,7 +35,7 @@ const outcomes = [
   {
     label: "Operación",
     title: "Hacer que el negocio fluya mejor",
-    chips: ["AI", "Automatización", "CRM"],
+    chips: ["IA", "Automatización", "Gestión comercial"],
     text: "Para reducir tareas repetitivas, ordenar información y conectar herramientas que hoy trabajan como islas.",
     action: "Más eficiencia",
   },
@@ -54,14 +54,14 @@ const solutions = [
     title: "Lanzar un negocio",
     href: "/soluciones/lanzar-negocio.html",
     text: "Convertimos una idea en una marca, oferta y presencia digital lista para salir al mercado con claridad y confianza.",
-    tags: ["Naming", "Branding", "Web", "Contenido", "Pitch"],
+    tags: ["Nombre de marca", "Marca", "Web", "Contenido", "Presentación"],
   },
   {
     mark: "↑",
     title: "Modernizar una empresa",
     href: "/soluciones/modernizar-empresa.html",
     text: "Actualizamos marca, comunicación, sitio web y experiencia para que la empresa se vea y funcione como su próximo nivel.",
-    tags: ["Diagnóstico", "Rebrand", "UX/UI", "Presentaciones", "Roadmap"],
+    tags: ["Diagnóstico", "Reposicionamiento", "Experiencia de usuario", "Presentaciones", "Hoja de ruta"],
     rotateMark: true,
   },
   {
@@ -69,7 +69,7 @@ const solutions = [
     title: "Automatizar procesos",
     href: "/soluciones/automatizar-procesos.html",
     text: "Diseñamos flujos inteligentes para conectar herramientas, ordenar información y eliminar trabajo repetitivo.",
-    tags: ["IA", "Automatización", "Apps", "Integraciones", "CRM"],
+    tags: ["IA", "Automatización", "Aplicaciones", "Integraciones", "Gestión comercial"],
   },
   {
     mark: "●",
@@ -83,7 +83,7 @@ const solutions = [
     title: "Proyecto 360",
     href: "/soluciones/proyecto-360.html",
     text: "Integramos estrategia, marca, web, automatización y experiencia física en un proyecto de transformación total.",
-    tags: ["Estrategia", "Brand", "Digital", "Smart", "Physical"],
+    tags: ["Estrategia", "Marca", "Digital", "Inteligencia", "Físico"],
   },
 ];
 
@@ -126,12 +126,12 @@ const systemNodes = [
   },
   {
     label: "Operación",
-    title: "Growth + Smart",
+    title: "Crecimiento + Inteligencia",
     text: "Para ordenar procesos, conectar herramientas y liberar tiempo operativo.",
   },
   {
     label: "Experiencia",
-    title: "Creative + Physical",
+    title: "Creatividad + Físico",
     text: "Para que la marca se vea coherente en presentaciones, contenido, oficinas, locales y puntos de contacto reales.",
   },
 ];
@@ -376,7 +376,7 @@ export default function SolucionesPage() {
                 <p>
                   El próximo paso es profundizar cada ruta con problema, promesa,
                   entregables, proceso, módulos recomendados, ejemplos de
-                  aplicación y CTA específico.
+                  aplicación y llamado a la acción específico.
                 </p>
               </div>
               <div className="cta-actions">

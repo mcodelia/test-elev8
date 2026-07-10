@@ -5,7 +5,7 @@ const radarItems = [
   ["CAS", "Casos de éxito", "/recursos/casos-de-exito.html"],
   ["DIA", "Diagnósticos", "/recursos/diagnosticos.html"],
   ["GUI", "Guías", "/recursos/guias.html"],
-  ["LOG", "Blog", "/recursos/blog.html"],
+  ["ART", "Artículos", "/recursos/blog.html"],
 ];
 
 const seoCards = [
@@ -41,10 +41,10 @@ const hubs = [
   },
   {
     mark: "∞",
-    title: "Blog",
+    title: "Artículos",
     href: "/recursos/blog.html",
     text: "Ideas, tendencias, puntos de vista y artículos cortos para mantener viva la autoridad editorial de Elev8.",
-    tags: ["Opinión", "Tendencias", "Insights"],
+    tags: ["Opinión", "Tendencias", "Miradas"],
   },
 ];
 
@@ -52,29 +52,29 @@ const topics = [
   {
     topic: "Marca",
     title: "Marca y percepción",
-    chips: ["Branding", "Naming", "Identidad"],
+    chips: ["Marca", "Nombre de marca", "Identidad"],
     text: "Cómo saber si una marca se ve débil, antigua, genérica o desconectada del nivel real del negocio.",
     action: "Guías + Diagnósticos",
   },
   {
     topic: "Web",
     title: "Sitios que convierten",
-    chips: ["UX/UI", "Landing", "SEO"],
+    chips: ["Experiencia", "Página de aterrizaje", "Búsqueda"],
     text: "Qué revisar antes de rediseñar una web, cómo mejorar conversión y cómo ordenar contenido para vender mejor.",
-    action: "Guías + Blog",
+    action: "Guías + artículos",
   },
   {
     topic: "Autoridad",
     title: "Contenido que abre mercado",
-    chips: ["Casos", "Guías", "Blog", "Diagnóstico"],
+    chips: ["Casos", "Guías", "Artículos", "Diagnóstico"],
     text: "La estrategia no es llenar el sitio de textos. Es construir un mapa de contenido que responda dudas, demuestre criterio y conecte con soluciones concretas.",
     action: "Sistema editorial",
     featured: true,
   },
   {
-    topic: "Smart",
+    topic: "Inteligencia",
     title: "Automatización e IA",
-    chips: ["Procesos", "CRM", "IA"],
+    chips: ["Procesos", "Gestión comercial", "IA"],
     text: "Señales de procesos manuales, herramientas desconectadas y oportunidades para trabajar con sistemas más inteligentes.",
     action: "Diagnósticos + Guías",
   },
@@ -83,24 +83,24 @@ const topics = [
     title: "Espacios y marca física",
     chips: ["Oficinas", "Letreros", "Señalética"],
     text: "Cómo llevar la identidad al mundo real: espacios, vehículos, puntos de venta, stands y soportes tangibles.",
-    action: "Casos + Blog",
+    action: "Casos + artículos",
   },
 ];
 
 const intents = [
-  ["¿Cómo saber si necesito renovar mi marca?", "Diagnóstico / Branding"],
-  ["¿Qué debe tener una página web profesional?", "Guía / Digital Experiences"],
-  ["¿Cuándo conviene automatizar procesos?", "Diagnóstico / Smart Solutions"],
+  ["¿Cómo saber si necesito renovar mi marca?", "Diagnóstico / Marca"],
+  ["¿Qué debe tener una página web profesional?", "Guía / Experiencias digitales"],
+  ["¿Cuándo conviene automatizar procesos?", "Diagnóstico / Soluciones inteligentes"],
   ["¿Cómo lanzar un negocio desde cero?", "Guía / Solución lanzamiento"],
-  ["¿Qué errores hacen que una empresa se vea poco profesional?", "Blog / Marca y web"],
-  ["¿Cómo mejorar la experiencia de una oficina o local?", "Guía / Physical Brand"],
+  ["¿Qué errores hacen que una empresa se vea poco profesional?", "Artículo / Marca y web"],
+  ["¿Cómo mejorar la experiencia de una oficina o local?", "Guía / Marca física"],
 ];
 
 const calendar = [
   ["MES 01", "Diagnosticar", "Contenidos para detectar problemas: marca débil, web que no convierte, procesos manuales o espacios desconectados."],
   ["MES 02", "Educar", "Guías prácticas con pasos, criterios y decisiones clave antes de invertir en diseño, tecnología o implementación."],
   ["MES 03", "Demostrar", "Casos de éxito, procesos de transformación, antes/después y aprendizajes aplicables a nuevos proyectos."],
-  ["MES 04", "Convertir", "Artículos conectados a soluciones específicas, con CTA hacia diagnóstico, contacto o rutas de proyecto."],
+  ["MES 04", "Convertir", "Artículos conectados a soluciones específicas, con llamados hacia diagnóstico, contacto o rutas de proyecto."],
 ];
 
 function SectionHeading({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) {
@@ -137,7 +137,7 @@ export default function RecursosPage() {
                 </strong>
                 <p>
                   Recursos no debe ser una sección decorativa. Debe funcionar
-                  como un sistema SEO: educa al cliente, posiciona a Elev8 y
+                  como un sistema de búsqueda: educa al cliente, posiciona a Elev8 y
                   ordena el camino hacia servicios, soluciones y proyectos más
                   grandes.
                 </p>
@@ -156,7 +156,7 @@ export default function RecursosPage() {
               </div>
               <div className="resources-panel-note">
                 <p>
-                  SEO puro, pero con intención: que cada visita entienda mejor su
+                  Visibilidad orgánica, pero con intención: que cada visita entienda mejor su
                   problema y encuentre una puerta de entrada hacia Elev8.
                 </p>
                 <a className="btn panel-cta" href="#hub">
@@ -169,16 +169,16 @@ export default function RecursosPage() {
 
         <div className="index-strip" aria-hidden="true">
           <span>
-            Casos de éxito — Diagnósticos — Guías — Blog — Marca — Web —
+            Casos de éxito — Diagnósticos — Guías — Artículos — Marca — Web —
             Automatización — IA — Espacios — Crecimiento — Casos de éxito —
-            Diagnósticos — Guías — Blog — Marca — Web — Automatización — IA —
+            Diagnósticos — Guías — Artículos — Marca — Web — Automatización — IA —
             Espacios — Crecimiento —
           </span>
         </div>
 
         <section id="vision">
           <div className="wrap">
-            <SectionHeading eyebrow="SEO puro" title="No perseguir visitas. Capturar intención.">
+            <SectionHeading eyebrow="Búsqueda con intención" title="No perseguir visitas. Capturar intención.">
               La sección Recursos debe responder preguntas que los clientes ya
               están buscando: cómo lanzar, cómo modernizar, cómo mejorar una web,
               cómo automatizar, cómo renovar un espacio y cómo elegir bien antes
@@ -202,7 +202,7 @@ export default function RecursosPage() {
         <section id="hub" className="dark">
           <div className="wrap">
             <SectionHeading eyebrow="Índice de recursos" title="Cuatro entradas para aprender mejor.">
-              Cada subpágina cumple una función distinta dentro del SEO: prueba,
+              Cada subpágina cumple una función distinta dentro de la visibilidad orgánica: prueba,
               evaluación, educación y opinión experta.
             </SectionHeading>
 
@@ -230,7 +230,7 @@ export default function RecursosPage() {
 
         <section id="temas">
           <div className="wrap">
-            <SectionHeading eyebrow="Clusters SEO" title="Los temas deben nacer desde problemas buscables.">
+            <SectionHeading eyebrow="Territorios de búsqueda" title="Los temas deben nacer desde problemas buscables.">
               La arquitectura editorial se puede organizar por grandes
               territorios para que Google entienda de qué sabe Elev8 y el cliente
               entienda cuándo debe pedir ayuda.
@@ -239,7 +239,7 @@ export default function RecursosPage() {
             <div className="topic-board">
               {topics.map((topic) => (
                 <article className={`topic-card${topic.featured ? " topic-feature" : ""}`} data-topic={topic.topic} key={topic.title}>
-                  {topic.featured ? <span className="big-word" aria-hidden="true">SEO</span> : null}
+                  {topic.featured ? <span className="big-word" aria-hidden="true">BUSCAR</span> : null}
                   <div>
                     <h3>{topic.title}</h3>
                     <div className="topic-meta">
@@ -304,11 +304,11 @@ export default function RecursosPage() {
             <div className="resource-cta">
               <div>
                 <div className="eyebrow">Siguiente nivel</div>
-                <h2>Desde esta página nacen las cuatro subpáginas SEO.</h2>
+                <h2>Desde esta página nacen las cuatro subpáginas editoriales.</h2>
                 <p>
                   El próximo paso es desarrollar Casos de éxito, Diagnósticos,
-                  Guías y Blog con estructura propia: hero, filtros, categorías,
-                  artículos destacados, clusters SEO y CTA hacia servicios o
+                  Guías y Artículos con estructura propia: hero, filtros, categorías,
+                  artículos destacados, territorios de búsqueda y llamados hacia servicios o
                   soluciones.
                 </p>
               </div>

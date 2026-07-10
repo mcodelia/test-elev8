@@ -16,11 +16,11 @@ const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
       description:
         "Desde estrategia y marca hasta web, automatización, IA y experiencia física.",
       links: [
-        { href: "/servicios/strategy-growth.html", label: "Strategy & Growth" },
-        { href: "/servicios/brand-creative.html", label: "Brand & Creative" },
-        { href: "/servicios/digital-experiences.html", label: "Digital Experiences" },
-        { href: "/servicios/smart-solutions.html", label: "Smart Solutions" },
-        { href: "/servicios/physical-brand.html", label: "Physical Brand" },
+        { href: "/servicios/strategy-growth.html", label: "Estrategia y crecimiento" },
+        { href: "/servicios/brand-creative.html", label: "Marca y creatividad" },
+        { href: "/servicios/digital-experiences.html", label: "Experiencias digitales" },
+        { href: "/servicios/smart-solutions.html", label: "Soluciones inteligentes" },
+        { href: "/servicios/physical-brand.html", label: "Marca física" },
       ],
       cardTitle: "¿No sabes qué servicio necesitas?",
       cardText:
@@ -63,9 +63,9 @@ const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
         { href: "/recursos/casos-de-exito.html", label: "Casos de éxito" },
         { href: "/recursos/diagnosticos.html", label: "Diagnósticos" },
         { href: "/recursos/guias.html", label: "Guías" },
-        { href: "/recursos/blog.html", label: "Blog" },
+        { href: "/recursos/blog.html", label: "Artículos" },
       ],
-      cardTitle: "SEO con criterio",
+      cardTitle: "Búsqueda con criterio",
       cardText:
         "No escribir por escribir. Crear contenido que eduque, posicione y abra conversaciones comerciales.",
       cardCta: "Ver recursos",
@@ -97,13 +97,36 @@ const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
 
 export default function Header({ active }: { active?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
   const closeMenu = () => setIsMenuOpen(false);
+  const hrefForLanguage = (href: string) => {
+    if (href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
+    const [pathWithQuery, hash = ""] = href.split("#");
+    const [path, query = ""] = pathWithQuery.split("?");
+    const cleanPath = path === "/en" ? "/" : path.replace(/^\/en(?=\/)/, "");
+    const localizedPath = language === "en" ? (cleanPath === "/" ? "/en" : `/en${cleanPath}`) : cleanPath;
+    return `${localizedPath}${query ? `?${query}` : ""}${hash ? `#${hash}` : ""}`;
+  };
+
+  const translatedMenu = (menu: MegaMenuData): MegaMenuData => ({
+    ...menu,
+    kicker: t(menu.kicker),
+    title: t(menu.title),
+    description: t(menu.description),
+    cardTitle: t(menu.cardTitle),
+    cardText: t(menu.cardText),
+    cardCta: t(menu.cardCta),
+    cardHref: hrefForLanguage(menu.cardHref),
+    links: menu.links.map((link) => ({
+      href: hrefForLanguage(link.href),
+      label: t(link.label),
+    })),
+  });
 
   return (
     <nav className={`nav${isMenuOpen ? " menu-open" : ""}`}>
       <div className="wrap navin">
-        <Link className="logo" href="/" aria-label="Elev8 inicio" onClick={closeMenu}>
+        <Link className="logo" href={hrefForLanguage("/")} aria-label="Elev8 inicio" onClick={closeMenu}>
           elev8
         </Link>
 
@@ -112,23 +135,24 @@ export default function Header({ active }: { active?: string }) {
             <div className="nav-item" key={item.label}>
               <a
                 className={`nav-trigger${active === item.label ? " active" : ""}`}
-                href={item.href}
+                href={hrefForLanguage(item.href)}
               >
-                {item.label}
+                {t(item.label)}
               </a>
-              <MegaMenu menu={item.menu} />
+              <MegaMenu menu={translatedMenu(item.menu)} />
             </div>
           ))}
         </div>
 
-        <a href="/contacto" className="btn nav-cta">
-          Iniciar un proyecto
+        <a href={hrefForLanguage("/contacto")} className="btn nav-cta">
+          {t("Iniciar un proyecto")}
         </a>
 
         <div className="language-toggle" aria-label="Selector de idioma">
           <button
             className={language === "es" ? "active" : ""}
             type="button"
+            suppressHydrationWarning
             onClick={() => setLanguage("es")}
           >
             ES
@@ -137,6 +161,7 @@ export default function Header({ active }: { active?: string }) {
           <button
             className={language === "en" ? "active" : ""}
             type="button"
+            suppressHydrationWarning
             onClick={() => setLanguage("en")}
           >
             EN
@@ -162,22 +187,22 @@ export default function Header({ active }: { active?: string }) {
             <div className="mobile-menu-group" key={item.label}>
               <a
                 className={`mobile-menu-link${active === item.label ? " active" : ""}`}
-                href={item.href}
+                href={hrefForLanguage(item.href)}
                 onClick={closeMenu}
               >
-                {item.label}
+                {t(item.label)}
               </a>
               <div className="mobile-submenu">
                 {item.menu.links.map((link) => (
-                  <a href={link.href} key={link.href} onClick={closeMenu}>
-                    {link.label}
+                  <a href={hrefForLanguage(link.href)} key={link.href} onClick={closeMenu}>
+                    {t(link.label)}
                   </a>
                 ))}
               </div>
             </div>
           ))}
-          <a className="btn mobile-menu-cta" href="/contacto" onClick={closeMenu}>
-            Iniciar un proyecto
+          <a className="btn mobile-menu-cta" href={hrefForLanguage("/contacto")} onClick={closeMenu}>
+            {t("Iniciar un proyecto")}
           </a>
         </div>
       </div>

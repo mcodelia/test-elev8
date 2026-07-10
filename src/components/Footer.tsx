@@ -1,3 +1,7 @@
+"use client";
+
+import { useLanguage } from "./LanguageProvider";
+
 const footerLinks = [
   "Crear una marca",
   "Diseñar un sitio web",
@@ -8,38 +12,40 @@ const footerLinks = [
 ];
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer id="contacto" className="footer">
       <div className="wrap">
         <h2>
           Elev8
           <br />
-          crea sistemas que elevan negocios.
+          {t("crea sistemas que elevan negocios.")}
         </h2>
         <a className="btn footer-cta" href="mailto:hello@elev8.cl">
-          Hablemos del próximo proyecto
+          {t("Hablemos del próximo proyecto")}
         </a>
 
         <div className="footer-grid">
           <div className="footer-note">
             <p>
-              No importa por dónde empiece tu proyecto. Nuestro trabajo es
-              conectar estrategia, creatividad, tecnología y ejecución para
-              construir una solución coherente.
+              {t(
+                "No importa por dónde empiece tu proyecto. Nuestro trabajo es conectar estrategia, creatividad, tecnología y ejecución para construir una solución coherente.",
+              )}
             </p>
             <small>
-              Santiago, Chile
+              {t("Santiago, Chile")}
               <br />
               hello@elev8.cl
             </small>
           </div>
 
           <div>
-            <h3>¿Qué necesitas resolver?</h3>
-            <nav className="footer-index" aria-label="Accesos rápidos">
+            <h3>{t("¿Qué necesitas resolver?")}</h3>
+            <nav className="footer-index" aria-label={t("Accesos rápidos")}>
               {footerLinks.map((link) => (
                 <a href="#" key={link}>
-                  <strong>{link}</strong>
+                  <strong>{t(link)}</strong>
                   <span aria-hidden="true" />
                 </a>
               ))}
