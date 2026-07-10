@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
+import { useLanguage } from "./LanguageProvider";
 import MegaMenu, { type MegaMenuData } from "./MegaMenu";
 
 const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
@@ -96,6 +97,7 @@ const navItems: Array<{ href: string; label: string; menu: MegaMenuData }> = [
 
 export default function Header({ active }: { active?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
@@ -122,6 +124,24 @@ export default function Header({ active }: { active?: string }) {
         <a href="/contacto" className="btn nav-cta">
           Iniciar un proyecto
         </a>
+
+        <div className="language-toggle" aria-label="Selector de idioma">
+          <button
+            className={language === "es" ? "active" : ""}
+            type="button"
+            onClick={() => setLanguage("es")}
+          >
+            ES
+          </button>
+          <span>/</span>
+          <button
+            className={language === "en" ? "active" : ""}
+            type="button"
+            onClick={() => setLanguage("en")}
+          >
+            EN
+          </button>
+        </div>
 
         <button
           className="mobile-menu-toggle"
