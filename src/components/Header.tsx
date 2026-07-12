@@ -126,11 +126,11 @@ export default function Header({ active }: { active?: string }) {
   return (
     <nav className={`nav${isMenuOpen ? " menu-open" : ""}`}>
       <div className="wrap navin">
-        <Link className="logo" href={hrefForLanguage("/")} aria-label="Elev8 inicio" onClick={closeMenu}>
+        <Link className="logo" href={hrefForLanguage("/")} aria-label={t("Elev8 inicio")} onClick={closeMenu}>
           elev8
         </Link>
 
-        <div className="links" aria-label="Navegación principal">
+        <div className="links" aria-label={t("Navegación principal")}>
           {navItems.map((item) => (
             <div className="nav-item" key={item.label}>
               <a
@@ -148,7 +148,7 @@ export default function Header({ active }: { active?: string }) {
           {t("Iniciar un proyecto")}
         </a>
 
-        <div className="language-toggle" aria-label="Selector de idioma">
+        <div className="language-toggle" aria-label={t("Selector de idioma")}>
           <button
             className={language === "es" ? "active" : ""}
             type="button"
@@ -171,7 +171,7 @@ export default function Header({ active }: { active?: string }) {
         <button
           className="mobile-menu-toggle"
           type="button"
-          aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={isMenuOpen ? t("Cerrar menú") : t("Abrir menú")}
           aria-controls="mobile-menu"
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((open) => !open)}

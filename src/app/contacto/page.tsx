@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -401,14 +403,14 @@ export default function ContactoPage() {
                   <small>Base</small>
                   <span>Santiago, Chile</span>
                 </span>
-                <a href="/servicios">
+                <Link href="/servicios">
                   <small>Entrada</small>
                   <span>Servicios</span>
-                </a>
-                <a href="/soluciones">
+                </Link>
+                <Link href="/soluciones">
                   <small>Rutas</small>
                   <span>Soluciones</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

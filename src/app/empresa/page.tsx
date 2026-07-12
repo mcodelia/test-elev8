@@ -1,26 +1,28 @@
+import Link from "next/link";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const sideLinks = [
   ["01", "Nosotros", "#nosotros"],
-  ["02", "Enfoque", "#enfoque"],
-  ["03", "Nuestro proceso", "#proceso"],
-  ["04", "Contacto", "#contacto"],
+  ["02", "Cómo pensamos", "#enfoque"],
+  ["03", "Cómo trabajamos", "#proceso"],
+  ["04", "Siguiente paso", "#contacto"],
 ];
 
 const approachRows = [
-  ["01", "Entender", "Miramos el contexto antes de proponer: qué se quiere lograr, qué está frenando el avance y qué oportunidad real existe."],
-  ["02", "Ordenar", "Convertimos una necesidad abierta en una ruta clara, priorizando lo que aporta valor y dejando fuera lo que solo suma ruido."],
-  ["03", "Diseñar", "Traducimos la dirección en identidad, contenido, estructura, interfaz, pieza comercial, automatización o experiencia física."],
-  ["04", "Ejecutar", "Llevamos la solución a producción cuidando consistencia visual, claridad técnica y aplicación práctica."],
+  ["01", "Criterio antes que producción.", "No todo problema necesita más piezas."],
+  ["02", "Dirección antes que velocidad.", "Avanzar rápido no sirve si se avanza torcido."],
+  ["03", "Claridad antes que volumen.", "Menos ruido. Mejores decisiones."],
+  ["04", "Continuidad antes que campaña.", "Lo que se construye debe poder crecer."],
 ];
 
 const processRows = [
-  ["Paso 01", "Conversación inicial", "Entendemos el problema, el momento del negocio, los objetivos y las señales que muestran que es hora de cambiar algo."],
-  ["Paso 02", "Diagnóstico y ruta", "Definimos si conviene entrar por estrategia, marca, web, automatización, espacio físico o una solución 360."],
-  ["Paso 03", "Propuesta clara", "Ordenamos alcance, prioridades, entregables y etapas para que el proyecto sea entendible antes de ejecutarlo."],
-  ["Paso 04", "Diseño y construcción", "Desarrollamos la solución con una mirada integrada entre comunicación, experiencia, tecnología y aplicación real."],
-  ["Paso 05", "Implementación y evolución", "Entregamos una base que pueda seguir creciendo con nuevas páginas, contenidos, campañas, módulos o mejoras futuras."],
+  ["Paso 01", "Entender", "Escuchamos el contexto y el problema real."],
+  ["Paso 02", "Ordenar", "Definimos prioridades y una ruta concreta."],
+  ["Paso 03", "Diseñar", "Convertimos dirección en forma y experiencia."],
+  ["Paso 04", "Construir", "Llevamos la solución a producción."],
+  ["Paso 05", "Evolucionar", "Dejamos una base lista para crecer."],
 ];
 
 export default function EmpresaPage() {
@@ -35,18 +37,16 @@ export default function EmpresaPage() {
               <div>
                 <div className="page-label">Empresa Elev8</div>
                 <h1 className="company-title">
-                  Una empresa para construir con <em>dirección</em>.
+                  Existimos para convertir complejidad en <em>dirección</em>.
                 </h1>
               </div>
               <div className="company-intro">
                 <strong>
-                  Elev8 conecta estrategia, creatividad, tecnología y ejecución
-                  para transformar ideas en sistemas reales.
+                  Elev8 ayuda a tomar mejores decisiones antes de construir.
                 </strong>
                 <p>
-                  Trabajamos con empresas que quieren verse mejor, vender con más
-                  claridad, ordenar sus procesos y construir experiencias
-                  consistentes entre lo digital, lo visual y lo físico.
+                  Cuando una empresa crece, las piezas se separan. Nuestro trabajo
+                  es volver a darles sentido.
                 </p>
               </div>
             </div>
@@ -54,11 +54,10 @@ export default function EmpresaPage() {
             <aside className="company-side">
               <div className="side-content">
                 <span className="side-kicker">Empresa / One page</span>
-                <h2>Todo lo esencial en una sola lectura.</h2>
+                <h2>Criterio para construir mejor.</h2>
                 <p>
-                  Esta página presenta quiénes somos, cómo pensamos, cómo
-                  trabajamos y cómo iniciar un proyecto sin fragmentar el relato
-                  antes de tiempo.
+                  Quiénes somos, cómo pensamos y cómo trabajamos cuando el
+                  problema todavía no viene ordenado.
                 </p>
               </div>
 
@@ -75,7 +74,7 @@ export default function EmpresaPage() {
               </nav>
 
               <div className="side-foot">
-                <span>Visión + proceso + contacto</span>
+                <span>Dirección + criterio + proceso</span>
                 <a className="btn panel-cta" href="#nosotros">
                   Conocer Elev8
                 </a>
@@ -87,8 +86,8 @@ export default function EmpresaPage() {
         <div className="index-strip" aria-hidden="true">
           <span>
             Nosotros — Enfoque — Proceso — Contacto — Estrategia — Diseño —
-            Tecnología — Ejecución — Nosotros — Enfoque — Proceso — Contacto —
-            Estrategia — Diseño — Tecnología — Ejecución —
+            Decisiones — Dirección — Nosotros — Enfoque — Proceso — Contacto —
+            Criterio — Claridad — Continuidad —
           </span>
         </div>
 
@@ -98,45 +97,40 @@ export default function EmpresaPage() {
               <div className="eyebrow">Nosotros</div>
             </div>
             <div className="editorial">
-              <h2>No somos solo estudio, agencia o productora.</h2>
+              <h2>No nacimos para producir más. Nacimos para ordenar mejor.</h2>
               <p className="lead">
-                Somos una estructura creativa y digital pensada para ordenar
-                proyectos que mezclan marca, web, tecnología, contenido y
-                experiencia física.
+                Elev8 existe para problemas que no se resuelven con una pieza
+                aislada.
               </p>
 
               <div className="text-columns">
                 <div>
                   <p>
-                    Muchas empresas crecen con piezas separadas: una identidad que
-                    quedó antigua, una web que no explica bien, presentaciones poco
-                    consistentes, procesos manuales y materiales físicos que no
-                    representan el nivel real del negocio.
+                    Muchas empresas crecen más rápido que su relato. Lo visual,
+                    lo digital, lo operativo y lo físico empiezan a ir por caminos
+                    distintos.
                   </p>
                   <p>
-                    Elev8 nace para unir esas capas bajo una misma dirección. No se
-                    trata de hacer más piezas, sino de hacer que cada pieza tenga
-                    sentido dentro del sistema.
+                    Ahí aparece nuestro rol: mirar el conjunto, tomar decisiones
+                    y construir con intención.
                   </p>
                 </div>
                 <div>
                   <p>
-                    Por eso nuestro trabajo puede comenzar desde distintos puntos:
-                    una marca nueva, un sitio web, una automatización, una
-                    renovación de espacio o una solución integral.
+                    No partimos desde una lista de entregables. Partimos desde lo
+                    que impide avanzar.
                   </p>
                   <p>
-                    El objetivo siempre es el mismo: que la empresa se vea mejor,
-                    comunique con más claridad y tenga una base preparada para
-                    crecer.
+                    Después definimos qué construir, qué dejar fuera y qué debe
+                    quedar preparado para crecer.
                   </p>
                 </div>
               </div>
 
               <div className="statement">
-                <em>Menos piezas sueltas.</em>
+                <em>Menos reacción.</em>
                 <br />
-                Más dirección, más coherencia, más capacidad de avanzar.
+                Más criterio, más claridad, más dirección.
               </div>
             </div>
           </div>
@@ -148,11 +142,9 @@ export default function EmpresaPage() {
               <div className="eyebrow">Enfoque</div>
             </div>
             <div className="editorial">
-              <h2>La forma Elev8 de construir.</h2>
+              <h2>Cómo pensamos.</h2>
               <p className="lead">
-                Primero entendemos el negocio. Después definimos la ruta.
-                Finalmente diseñamos, construimos e implementamos con
-                consistencia.
+                Cuatro principios simples. No teoría. Decisiones.
               </p>
 
               <div className="simple-list">
@@ -174,11 +166,10 @@ export default function EmpresaPage() {
               <div className="eyebrow">Nuestro proceso</div>
             </div>
             <div className="editorial">
-              <h2>De una necesidad abierta a una solución construible.</h2>
+              <h2>Cómo trabajamos.</h2>
               <p className="lead">
-                El proceso está pensado para clientes que no siempre saben
-                exactamente qué pedir, pero sí saben que algo necesita mejorar,
-                lanzarse, ordenarse o escalarse.
+                Lo suficiente para avanzar con foco. El detalle aparece en la
+                conversación.
               </p>
 
               <div className="process-list">
@@ -199,19 +190,17 @@ export default function EmpresaPage() {
             <div className="contact-simple">
               <div>
                 <div className="eyebrow">Contacto</div>
-                <h2>Cuéntanos qué necesitas resolver. Nosotros ordenamos la ruta.</h2>
+                <h2>Cuéntanos qué estás construyendo.</h2>
                 <p>
-                  No necesitas llegar con un brief perfecto. Basta con una
-                  necesidad clara, una idea inicial o un problema que ya se repite
-                  demasiado.
+                  Veamos si podemos ayudarte a darle dirección.
                 </p>
                 <div className="contact-actions">
                   <a className="btn dark-btn" href="mailto:hello@elev8.cl?subject=Nuevo%20proyecto%20para%20Elev8">
                     Escribir a Elev8
                   </a>
-                  <a className="btn" href="/soluciones">
+                  <Link className="btn" href="/soluciones">
                     Ver soluciones
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="contact-info">
@@ -223,14 +212,14 @@ export default function EmpresaPage() {
                   <small>Base</small>
                   <span>Santiago, Chile</span>
                 </span>
-                <a href="/servicios">
+                <Link href="/servicios">
                   <small>Entrada</small>
                   <span>Servicios</span>
-                </a>
-                <a href="/soluciones">
+                </Link>
+                <Link href="/soluciones">
                   <small>Rutas</small>
                   <span>Soluciones</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

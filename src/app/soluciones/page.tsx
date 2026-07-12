@@ -12,39 +12,39 @@ const radarItems = [
 const outcomes = [
   {
     label: "Claridad",
-    title: "Convertir ideas en dirección",
+    title: "Salir con claridad",
     chips: ["Oferta", "Mensaje", "Ruta"],
-    text: "Para dejar de improvisar y transformar una necesidad en una arquitectura clara de marca, web, contenido, sistemas o espacio.",
-    action: "Más foco",
+    text: "Cuando hay una idea, pero falta estructura para lanzarla.",
+    action: "Conocer la ruta",
   },
   {
     label: "Percepción",
-    title: "Elevar cómo se ve la empresa",
+    title: "Verse al nivel correcto",
     chips: ["Marca", "Digital", "Contenido"],
-    text: "Para que la presencia visual, comercial y digital esté a la altura de lo que la empresa realmente ofrece.",
-    action: "Más valor percibido",
+    text: "Cuando la empresa funciona, pero no se percibe así.",
+    action: "Explorar decisión",
   },
   {
     label: "Sistema",
-    title: "Construir un ecosistema completo",
-    chips: ["Estrategia", "Marca", "Web", "Inteligencia", "Físico"],
-    text: "Para conectar todas las capas del negocio y evitar el clásico Frankenstein corporativo: logo por un lado, web por otro, procesos en Excel y el cliente mirando raro.",
-    action: "Proyecto 360",
+    title: "Ordenar todo el recorrido",
+    chips: ["Presencia", "Operación", "Experiencia"],
+    text: "Cuando todo existe, pero nada conversa bien entre sí.",
+    action: "Ver solución",
     featured: true,
   },
   {
     label: "Operación",
-    title: "Hacer que el negocio fluya mejor",
-    chips: ["IA", "Automatización", "Gestión comercial"],
-    text: "Para reducir tareas repetitivas, ordenar información y conectar herramientas que hoy trabajan como islas.",
-    action: "Más eficiencia",
+    title: "Trabajar con menos fricción",
+    chips: ["Procesos", "Datos", "Flujos"],
+    text: "Cuando el equipo pierde tiempo en tareas repetidas.",
+    action: "Resolver operación",
   },
   {
     label: "Experiencia",
-    title: "Materializar la marca en el mundo real",
+    title: "Hacer visible la marca",
     chips: ["Espacio", "Señalética", "Ambientación"],
-    text: "Para transformar oficinas, locales, stands, vehículos o espacios comerciales en experiencias coherentes con la marca.",
-    action: "Más presencia",
+    text: "Cuando la experiencia física no refleja el estándar del negocio.",
+    action: "Explorar ruta",
   },
 ];
 
@@ -53,37 +53,37 @@ const solutions = [
     mark: "✦",
     title: "Lanzar un negocio",
     href: "/soluciones/lanzar-negocio.html",
-    text: "Convertimos una idea en una marca, oferta y presencia digital lista para salir al mercado con claridad y confianza.",
-    tags: ["Nombre de marca", "Marca", "Web", "Contenido", "Presentación"],
+    text: "De idea suelta a salida clara al mercado.",
+    tags: ["Oferta", "Nombre", "Presencia"],
   },
   {
     mark: "↑",
     title: "Modernizar una empresa",
     href: "/soluciones/modernizar-empresa.html",
-    text: "Actualizamos marca, comunicación, sitio web y experiencia para que la empresa se vea y funcione como su próximo nivel.",
-    tags: ["Diagnóstico", "Reposicionamiento", "Experiencia de usuario", "Presentaciones", "Hoja de ruta"],
+    text: "De presencia antigua a percepción alineada.",
+    tags: ["Diagnóstico", "Percepción", "Confianza"],
     rotateMark: true,
   },
   {
     mark: "∞",
     title: "Automatizar procesos",
     href: "/soluciones/automatizar-procesos.html",
-    text: "Diseñamos flujos inteligentes para conectar herramientas, ordenar información y eliminar trabajo repetitivo.",
-    tags: ["IA", "Automatización", "Aplicaciones", "Integraciones", "Gestión comercial"],
+    text: "De operación manual a flujo conectado.",
+    tags: ["Procesos", "Tiempo", "Orden"],
   },
   {
     mark: "●",
     title: "Renovar un espacio",
     href: "/soluciones/renovar-espacio-fisico.html",
-    text: "Transformamos espacios físicos en experiencias más memorables, funcionales y coherentes con la identidad de marca.",
-    tags: ["Oficinas", "Locales", "Señalética", "Stands", "Renta corta"],
+    text: "De espacio neutro a presencia reconocible.",
+    tags: ["Espacio", "Señales", "Experiencia"],
   },
   {
     mark: "◇",
     title: "Proyecto 360",
     href: "/soluciones/proyecto-360.html",
-    text: "Integramos estrategia, marca, web, automatización y experiencia física en un proyecto de transformación total.",
-    tags: ["Estrategia", "Marca", "Digital", "Inteligencia", "Físico"],
+    text: "De piezas aisladas a recorrido coherente.",
+    tags: ["Recorrido", "Decisión", "Continuidad"],
   },
 ];
 
@@ -97,24 +97,24 @@ const clientNeeds = [
 
 const methodSteps = [
   {
-    label: "Detectar",
-    title: "Entendemos el bloqueo.",
-    text: "Revisamos oferta, marca, canales, procesos, herramientas, experiencia actual y objetivos del negocio.",
+    label: "Entender",
+    title: "Qué está pasando.",
+    text: "Miramos el problema antes de producir.",
   },
   {
-    label: "Diseñar",
-    title: "Definimos la ruta correcta.",
-    text: "Ordenamos prioridades, módulos, entregables y combinaciones de servicios según el resultado esperado.",
+    label: "Definir",
+    title: "Qué debe cambiar.",
+    text: "Convertimos la necesidad en ruta.",
   },
   {
     label: "Construir",
-    title: "Ejecutamos con dirección.",
-    text: "Creamos marca, web, contenido, sistemas, automatizaciones o elementos físicos con una misma lógica visual y estratégica.",
+    title: "Qué se materializa.",
+    text: "Creamos sólo lo que empuja el resultado.",
   },
   {
-    label: "Escalar",
-    title: "Preparamos la evolución.",
-    text: "Dejamos bases ordenadas para nuevos módulos, campañas, integraciones, páginas interiores o mejoras futuras.",
+    label: "Evolucionar",
+    title: "Qué queda listo.",
+    text: "Dejamos una base para seguir avanzando.",
   },
 ];
 
@@ -168,19 +168,17 @@ export default function SolucionesPage() {
               <div>
                 <div className="page-label">Soluciones Elev8</div>
                 <h1 className="solutions-title">
-                  No vendemos servicios. Diseñamos <em>resultados.</em>
+                  Entra por el problema. Sal con una <em>ruta.</em>
                 </h1>
               </div>
               <div className="solutions-intro">
                 <strong>
-                  El cliente no llega buscando una lista. Llega con una meta, un
-                  bloqueo o una oportunidad.
+                  Nadie llega buscando una lista. Llega con algo que necesita
+                  cambiar.
                 </strong>
                 <p>
-                  Esta página ordena las soluciones de Elev8 por resultado:
-                  lanzar, modernizar, automatizar, renovar o construir una
-                  transformación completa. Desde aquí nacen las páginas
-                  individuales de cada ruta.
+                  Esta página ordena ese cambio: lanzar, modernizar, automatizar,
+                  renovar o alinear todo el recorrido.
                 </p>
               </div>
             </div>
@@ -197,9 +195,8 @@ export default function SolucionesPage() {
               </div>
               <div className="solutions-panel-note">
                 <p>
-                  Una entrada más comercial, más simple y más directa para
-                  explicar qué puede lograr Elev8 sin obligar al cliente a
-                  entender primero todos los servicios.
+                  Elige la situación que más se parece a la tuya. Desde ahí
+                  empezamos mejor.
                 </p>
                 <a className="btn panel-cta" href="#rutas">
                   Ver rutas
@@ -222,11 +219,10 @@ export default function SolucionesPage() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Enfoque"
-              title="Una solución no es una tarea. Es una forma de mover el negocio."
+              title="Cada decisión abre una ruta."
             >
-              Partimos por el resultado que se quiere lograr y desde ahí armamos
-              el camino: qué construir, qué ordenar, qué automatizar, qué
-              comunicar y qué experiencia debe vivir el cliente.
+              La pregunta no es qué contratar. La pregunta es qué necesitas
+              resolver primero.
             </SectionHeading>
 
             <div className="outcome-board">
@@ -266,11 +262,10 @@ export default function SolucionesPage() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Rutas de solución"
-              title="Cinco entradas para resolver problemas reales."
+              title="Cinco entradas. Cinco decisiones."
             >
-              Cada ruta puede funcionar de forma independiente o combinarse con
-              otras. La promesa no es “hacer cosas”; es acercar al negocio a un
-              resultado concreto.
+              Cada una conduce a una página específica. Sin pasar por una lista
+              de servicios.
             </SectionHeading>
 
             <div className="solution-index">
@@ -303,10 +298,9 @@ export default function SolucionesPage() {
           <div className="wrap fit-layout">
             <div className="fit-left">
               <div className="eyebrow">Necesidades del cliente</div>
-              <h2>El cliente entra por lo que quiere lograr.</h2>
+              <h2>Si esto te pasa, entra por aquí.</h2>
               <p>
-                Estas frases ayudan a convertir una consulta ambigua en una ruta
-                concreta, vendible y fácil de entender.
+                Menos diagnóstico mental. Más punto de partida.
               </p>
             </div>
             <div className="fit-list">
@@ -325,11 +319,9 @@ export default function SolucionesPage() {
           <div className="wrap method-system">
             <div className="method-left">
               <div className="eyebrow">Método Elev8</div>
-              <h2>Del problema al sistema.</h2>
+              <h2>Del problema a la ruta.</h2>
               <p className="lead">
-                La solución se diseña antes de producir. Así evitamos parches,
-                piezas aisladas y proyectos que se ven bonitos pero no mueven
-                nada.
+                Cuatro pasos. El detalle vive en cada solución.
               </p>
             </div>
             <div className="method-steps">
@@ -349,8 +341,7 @@ export default function SolucionesPage() {
             <div className="system-board">
               <div className="eyebrow">Capas conectadas</div>
               <h2>
-                Las soluciones combinan capacidades. El resultado se siente como
-                una sola experiencia.
+                Una solución no se arma por piezas. Se arma por continuidad.
               </h2>
               <div className="system-grid">
                 {systemNodes.map((node) => (
@@ -372,19 +363,17 @@ export default function SolucionesPage() {
             <div className="solution-cta">
               <div>
                 <div className="eyebrow">Siguiente nivel</div>
-                <h2>Desde esta página nacen las páginas individuales de cada solución.</h2>
+                <h2>Explora la ruta que más se parece a tu problema.</h2>
                 <p>
-                  El próximo paso es profundizar cada ruta con problema, promesa,
-                  entregables, proceso, módulos recomendados, ejemplos de
-                  aplicación y llamado a la acción específico.
+                  Cada página profundiza en señales, escenarios y próximos pasos.
                 </p>
               </div>
               <div className="cta-actions">
                 <a className="btn dark-btn" href="/contacto#formulario">
-                  Iniciar proyecto
+                  Iniciar un proyecto
                 </a>
                 <a className="btn" href="/soluciones/lanzar-negocio.html">
-                  Primera solución
+                  Conocer la ruta
                 </a>
               </div>
             </div>

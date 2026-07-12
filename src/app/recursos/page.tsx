@@ -2,105 +2,58 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const radarItems = [
-  ["CAS", "Casos de éxito", "/recursos/casos-de-exito.html"],
+  ["CAS", "Casos", "/recursos/casos-de-exito.html"],
   ["DIA", "Diagnósticos", "/recursos/diagnosticos.html"],
   ["GUI", "Guías", "/recursos/guias.html"],
   ["ART", "Artículos", "/recursos/blog.html"],
 ];
 
-const seoCards = [
-  ["01", "↓", "Atraer tráfico útil", "Contenido pensado para búsquedas de negocio, marca, diseño web, automatización, IA y experiencia física."],
-  ["02", "?", "Resolver dudas reales", "Guías y diagnósticos que ayudan al cliente a entender qué necesita antes de pedir una cotización."],
-  ["03", "✦", "Demostrar criterio", "Casos y análisis que muestran cómo Elev8 piensa, decide y conecta estrategia con ejecución."],
-  ["04", "→", "Guiar la decisión", "Cada recurso debe abrir un siguiente paso: leer más, diagnosticar, comparar rutas o iniciar conversación."],
-  ["05", "∞", "Crear autoridad", "Un ecosistema editorial que crece con el tiempo y convierte conocimiento en posicionamiento."],
-];
-
-const hubs = [
+const featuredArticles = [
   {
-    mark: "↑",
-    title: "Casos de éxito",
-    href: "/recursos/casos-de-exito.html",
-    text: "Transformaciones, antes/después, problemas resueltos y resultados visibles. Sirven para demostrar capacidad sin depender solo de promesas.",
-    tags: ["Resultados", "Antes / Después", "Prueba social"],
-    rotateMark: true,
-  },
-  {
-    mark: "⌁",
-    title: "Diagnósticos",
-    href: "/recursos/diagnosticos.html",
-    text: "Checklists, auditorías rápidas y señales para detectar si una marca, web, proceso o espacio necesita evolucionar.",
-    tags: ["Auditoría", "Checklist", "Señales"],
-  },
-  {
-    mark: "✦",
-    title: "Guías",
-    href: "/recursos/guias.html",
-    text: "Contenido profundo para orientar decisiones: qué hacer, en qué orden, cuánto considerar y cómo evitar errores frecuentes.",
-    tags: ["Educación", "Paso a paso", "Comparativas"],
-  },
-  {
-    mark: "∞",
-    title: "Artículos",
+    type: "Artículo destacado",
+    title: "¿Por qué una buena empresa sigue pareciendo amateur?",
+    text: "Señales de marca, web y comunicación que reducen confianza antes de la primera conversación.",
     href: "/recursos/blog.html",
-    text: "Ideas, tendencias, puntos de vista y artículos cortos para mantener viva la autoridad editorial de Elev8.",
-    tags: ["Opinión", "Tendencias", "Miradas"],
+    action: "Descubrir",
+  },
+  {
+    type: "Caso destacado",
+    title: "Cómo reducir 18 horas semanales de trabajo manual.",
+    text: "Un problema operativo común: tareas repetidas, información dispersa y equipos persiguiendo datos.",
+    href: "/recursos/casos-de-exito.html",
+    action: "Ver el caso",
   },
 ];
 
-const topics = [
+const recentArticles = [
+  ["Marca", "¿Cómo saber si tu identidad ya quedó chica?", "Resolver"],
+  ["Web", "Qué revisar antes de rediseñar una página profesional.", "Aplicar"],
+  ["Operación", "Cuándo automatizar procesos sin sobrediseñar.", "Entender"],
+];
+
+const guideCards = [
   {
-    topic: "Marca",
-    title: "Marca y percepción",
-    chips: ["Marca", "Nombre de marca", "Identidad"],
-    text: "Cómo saber si una marca se ve débil, antigua, genérica o desconectada del nivel real del negocio.",
-    action: "Guías + Diagnósticos",
+    title: "Cómo lanzar una marca desde cero.",
+    text: "Una guía para pasar de idea abierta a presencia mínima viable.",
+    href: "/recursos/guias.html",
   },
   {
-    topic: "Web",
-    title: "Sitios que convierten",
-    chips: ["Experiencia", "Página de aterrizaje", "Búsqueda"],
-    text: "Qué revisar antes de rediseñar una web, cómo mejorar conversión y cómo ordenar contenido para vender mejor.",
-    action: "Guías + artículos",
+    title: "Cómo modernizar una empresa sin empezar de cero.",
+    text: "Qué conservar, qué corregir y qué ordenar primero.",
+    href: "/recursos/guias.html",
   },
   {
-    topic: "Autoridad",
-    title: "Contenido que abre mercado",
-    chips: ["Casos", "Guías", "Artículos", "Diagnóstico"],
-    text: "La estrategia no es llenar el sitio de textos. Es construir un mapa de contenido que responda dudas, demuestre criterio y conecte con soluciones concretas.",
-    action: "Sistema editorial",
-    featured: true,
-  },
-  {
-    topic: "Inteligencia",
-    title: "Automatización e IA",
-    chips: ["Procesos", "Gestión comercial", "IA"],
-    text: "Señales de procesos manuales, herramientas desconectadas y oportunidades para trabajar con sistemas más inteligentes.",
-    action: "Diagnósticos + Guías",
-  },
-  {
-    topic: "Físico",
-    title: "Espacios y marca física",
-    chips: ["Oficinas", "Letreros", "Señalética"],
-    text: "Cómo llevar la identidad al mundo real: espacios, vehículos, puntos de venta, stands y soportes tangibles.",
-    action: "Casos + artículos",
+    title: "Cómo elegir una plataforma web.",
+    text: "Preguntas prácticas antes de invertir en diseño o tecnología.",
+    href: "/recursos/guias.html",
   },
 ];
 
-const intents = [
-  ["¿Cómo saber si necesito renovar mi marca?", "Diagnóstico / Marca"],
-  ["¿Qué debe tener una página web profesional?", "Guía / Experiencias digitales"],
-  ["¿Cuándo conviene automatizar procesos?", "Diagnóstico / Soluciones inteligentes"],
-  ["¿Cómo lanzar un negocio desde cero?", "Guía / Solución lanzamiento"],
-  ["¿Qué errores hacen que una empresa se vea poco profesional?", "Artículo / Marca y web"],
-  ["¿Cómo mejorar la experiencia de una oficina o local?", "Guía / Marca física"],
-];
-
-const calendar = [
-  ["MES 01", "Diagnosticar", "Contenidos para detectar problemas: marca débil, web que no convierte, procesos manuales o espacios desconectados."],
-  ["MES 02", "Educar", "Guías prácticas con pasos, criterios y decisiones clave antes de invertir en diseño, tecnología o implementación."],
-  ["MES 03", "Demostrar", "Casos de éxito, procesos de transformación, antes/después y aprendizajes aplicables a nuevos proyectos."],
-  ["MES 04", "Convertir", "Artículos conectados a soluciones específicas, con llamados hacia diagnóstico, contacto o rutas de proyecto."],
+const questions = [
+  ["¿Mi marca se ve menos profesional que mi servicio?", "Marca y percepción"],
+  ["¿Mi web informa, pero no convierte?", "Experiencia digital"],
+  ["¿Mi equipo repite tareas que un sistema podría resolver?", "Automatización"],
+  ["¿Mi espacio físico comunica el nivel real del negocio?", "Marca física"],
 ];
 
 function SectionHeading({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) {
@@ -127,19 +80,16 @@ export default function RecursosPage() {
               <div>
                 <div className="page-label">Recursos Elev8</div>
                 <h1 className="resources-title">
-                  Contenido que ayuda a decidir, comparar y <em>avanzar.</em>
+                  Las mejores decisiones empiezan con mejores <em>preguntas.</em>
                 </h1>
               </div>
               <div className="resources-intro">
                 <strong>
-                  Una biblioteca editorial para atraer búsquedas reales y convertir
-                  curiosidad en conversaciones comerciales.
+                  Ideas, casos y guías para entender antes de invertir.
                 </strong>
                 <p>
-                  Recursos no debe ser una sección decorativa. Debe funcionar
-                  como un sistema de búsqueda: educa al cliente, posiciona a Elev8 y
-                  ordena el camino hacia servicios, soluciones y proyectos más
-                  grandes.
+                  Menos teoría. Más señales concretas para decidir qué cambiar,
+                  qué priorizar y qué construir.
                 </p>
               </div>
             </div>
@@ -156,11 +106,10 @@ export default function RecursosPage() {
               </div>
               <div className="resources-panel-note">
                 <p>
-                  Visibilidad orgánica, pero con intención: que cada visita entienda mejor su
-                  problema y encuentre una puerta de entrada hacia Elev8.
+                  Empieza por una pregunta. Termina con una ruta más clara.
                 </p>
-                <a className="btn panel-cta" href="#hub">
-                  Ver índice
+                <a className="btn panel-cta" href="#destacados">
+                  Explorar
                 </a>
               </div>
             </aside>
@@ -169,56 +118,52 @@ export default function RecursosPage() {
 
         <div className="index-strip" aria-hidden="true">
           <span>
-            Casos de éxito — Diagnósticos — Guías — Artículos — Marca — Web —
-            Automatización — IA — Espacios — Crecimiento — Casos de éxito —
-            Diagnósticos — Guías — Artículos — Marca — Web — Automatización — IA —
-            Espacios — Crecimiento —
+            Preguntas reales — Casos útiles — Guías prácticas — Decisiones claras —
+            Preguntas reales — Casos útiles — Guías prácticas — Decisiones claras —
           </span>
         </div>
 
-        <section id="vision">
+        <section id="destacados">
           <div className="wrap">
-            <SectionHeading eyebrow="Búsqueda con intención" title="No perseguir visitas. Capturar intención.">
-              La sección Recursos debe responder preguntas que los clientes ya
-              están buscando: cómo lanzar, cómo modernizar, cómo mejorar una web,
-              cómo automatizar, cómo renovar un espacio y cómo elegir bien antes
-              de invertir.
+            <SectionHeading eyebrow="Selección editorial" title="Dos lecturas para empezar.">
+              Una para mirar la percepción. Otra para mirar la operación.
             </SectionHeading>
 
-            <div className="seo-board">
-              {seoCards.map(([code, icon, title, text]) => (
-                <article className="seo-card" data-code={code} key={code}>
-                  <b>{icon}</b>
+            <div className="topic-board">
+              {featuredArticles.map((article) => (
+                <article className="topic-card" data-topic={article.type} key={article.title}>
                   <div>
-                    <h3>{title}</h3>
-                    <p>{text}</p>
+                    <h3>{article.title}</h3>
+                    <div className="topic-meta">
+                      <span className="topic-chip">{article.type}</span>
+                    </div>
                   </div>
+                  <p>{article.text}</p>
+                  <a className="topic-action" href={article.href}>
+                    <span>{article.action}</span>
+                    <span aria-hidden="true" />
+                  </a>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="hub" className="dark">
+        <section id="recientes" className="dark">
           <div className="wrap">
-            <SectionHeading eyebrow="Índice de recursos" title="Cuatro entradas para aprender mejor.">
-              Cada subpágina cumple una función distinta dentro de la visibilidad orgánica: prueba,
-              evaluación, educación y opinión experta.
+            <SectionHeading eyebrow="Artículos recientes" title="Problemas que conviene mirar temprano.">
+              Títulos pensados para resolver dudas, no para llenar una biblioteca.
             </SectionHeading>
 
             <div className="hub-index">
-              {hubs.map((hub) => (
-                <article className="hub-row" key={hub.title}>
-                  <a href={hub.href}>
-                    <span className="hub-mark">
-                      <span className={hub.rotateMark ? "hub-mark-rotate" : undefined}>{hub.mark}</span>
-                    </span>
-                    <h3>{hub.title}</h3>
-                    <p>{hub.text}</p>
+              {recentArticles.map(([topic, title, action]) => (
+                <article className="hub-row" key={title}>
+                  <a href="/recursos/blog.html">
+                    <span className="hub-mark">{topic.slice(0, 1)}</span>
+                    <h3>{title}</h3>
+                    <p>{topic}</p>
                     <div className="hub-tags">
-                      {hub.tags.map((tag) => (
-                        <span className="hub-tag" key={tag}>{tag}</span>
-                      ))}
+                      <span className="hub-tag">{action}</span>
                     </div>
                     <span className="circle-link" aria-hidden="true" />
                   </a>
@@ -228,28 +173,20 @@ export default function RecursosPage() {
           </div>
         </section>
 
-        <section id="temas">
+        <section id="guias">
           <div className="wrap">
-            <SectionHeading eyebrow="Territorios de búsqueda" title="Los temas deben nacer desde problemas buscables.">
-              La arquitectura editorial se puede organizar por grandes
-              territorios para que Google entienda de qué sabe Elev8 y el cliente
-              entienda cuándo debe pedir ayuda.
+            <SectionHeading eyebrow="Guías" title="Herramientas para decidir con más calma.">
+              Entradas prácticas para ordenar una conversación antes de pedir una propuesta.
             </SectionHeading>
 
-            <div className="topic-board">
-              {topics.map((topic) => (
-                <article className={`topic-card${topic.featured ? " topic-feature" : ""}`} data-topic={topic.topic} key={topic.title}>
-                  {topic.featured ? <span className="big-word" aria-hidden="true">BUSCAR</span> : null}
+            <div className="seo-board">
+              {guideCards.map((guide, index) => (
+                <article className="seo-card" data-code={`0${index + 1}`} key={guide.title}>
+                  <b>→</b>
                   <div>
-                    <h3>{topic.title}</h3>
-                    <div className="topic-meta">
-                      {topic.chips.map((chip) => <span className="topic-chip" key={chip}>{chip}</span>)}
-                    </div>
-                  </div>
-                  <p>{topic.text}</p>
-                  <div className="topic-action">
-                    <span>{topic.action}</span>
-                    <span aria-hidden="true" />
+                    <h3>{guide.title}</h3>
+                    <p>{guide.text}</p>
+                    <a className="btn" href={guide.href}>Aplicar</a>
                   </div>
                 </article>
               ))}
@@ -257,44 +194,24 @@ export default function RecursosPage() {
           </div>
         </section>
 
-        <section id="arquitectura">
+        <section id="preguntas">
           <div className="wrap architecture">
             <div className="architecture-left">
-              <div className="eyebrow">Intención de búsqueda</div>
-              <h2>Cada artículo debe tener una misión.</h2>
+              <div className="eyebrow">Preguntas frecuentes</div>
+              <h2>Si esta pregunta aparece, hay algo que mirar.</h2>
               <p>
-                El contenido puede entretener, pero en Elev8 debe hacer algo más
-                importante: acercar al cliente correcto al siguiente paso correcto.
+                Recursos existe para convertir dudas vagas en decisiones más
+                concretas.
               </p>
             </div>
             <div className="intent-list">
-              {intents.map(([question, type]) => (
-                <div className="intent" key={question}>
+              {questions.map(([question, type]) => (
+                <a className="intent" href="/contacto#formulario" key={question}>
                   <span className="mono">•</span>
                   <strong>“{question}”</strong>
                   <small>{type}</small>
-                </div>
+                </a>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="calendario">
-          <div className="wrap">
-            <div className="calendar-board">
-              <div className="eyebrow">Sistema editorial</div>
-              <h2>Una estructura simple para publicar sin improvisar.</h2>
-              <div className="calendar-grid">
-                {calendar.map(([label, title, text]) => (
-                  <article className="calendar-node" key={label}>
-                    <div>
-                      <em>{label}</em>
-                      <h3>{title}</h3>
-                    </div>
-                    <p>{text}</p>
-                  </article>
-                ))}
-              </div>
             </div>
           </div>
         </section>
@@ -303,18 +220,16 @@ export default function RecursosPage() {
           <div className="wrap">
             <div className="resource-cta">
               <div>
-                <div className="eyebrow">Siguiente nivel</div>
-                <h2>Desde esta página nacen las cuatro subpáginas editoriales.</h2>
+                <div className="eyebrow">Siguiente paso</div>
+                <h2>¿Hay una pregunta que se repite en tu empresa?</h2>
                 <p>
-                  El próximo paso es desarrollar Casos de éxito, Diagnósticos,
-                  Guías y Artículos con estructura propia: hero, filtros, categorías,
-                  artículos destacados, territorios de búsqueda y llamados hacia servicios o
-                  soluciones.
+                  Puede ser señal de marca, web, operación o experiencia. Podemos
+                  ayudarte a encontrar la ruta.
                 </p>
               </div>
               <div className="cta-actions">
-                <a className="btn dark-btn" href="/recursos/casos-de-exito.html">Primer recurso</a>
-                <a className="btn" href="/contacto#formulario">Iniciar proyecto</a>
+                <a className="btn dark-btn" href="/recursos/guias.html">Explorar guías</a>
+                <a className="btn" href="/contacto#formulario">Iniciar un proyecto</a>
               </div>
             </div>
           </div>
