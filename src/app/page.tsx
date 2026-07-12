@@ -167,6 +167,13 @@ export default function Home() {
                 <div className="kicker">Ecosistema creativo y digital</div>
                 <h1>Conectamos estrategia, creatividad y tecnología para construir empresas más sólidas.</h1>
               </div>
+              <div className="hero-system" aria-hidden="true">
+                <span>Strategy</span>
+                <span>Brand</span>
+                <span>Web</span>
+                <span>AI</span>
+                <span>Space</span>
+              </div>
               <div className="hero-copy">
                 <strong>
                   Elev8 existe para convertir complejidad en dirección.
@@ -182,6 +189,11 @@ export default function Home() {
               <div className="poster">
                 <div className="poster-inner">
                   <span className="btn poster-pill">Elev8 Studio</span>
+                  <div className="poster-index" aria-hidden="true">
+                    <span>01</span>
+                    <span>05</span>
+                    <span>∞</span>
+                  </div>
                   <h2>
                     Pensar
                     <br />

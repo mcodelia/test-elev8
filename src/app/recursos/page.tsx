@@ -83,6 +83,11 @@ export default function RecursosPage() {
                   Las mejores decisiones empiezan con mejores <em>preguntas.</em>
                 </h1>
               </div>
+              <div className="resources-hero-edition" aria-hidden="true">
+                <span>Editorial index</span>
+                <span>Casos / Guías / Diagnósticos / Artículos</span>
+                <span>Vol. 01</span>
+              </div>
               <div className="resources-intro">
                 <strong>
                   Ideas, casos y guías para entender antes de invertir.

@@ -80,6 +80,14 @@ export default function ContactoPage() {
                   Iniciar un <em>proyecto</em>.
                 </h1>
               </div>
+              <div className="contact-hero-brief" aria-hidden="true">
+                {formPoints.map(([number, text]) => (
+                  <span key={number}>
+                    <b>{number}</b>
+                    {text}
+                  </span>
+                ))}
+              </div>
               <div className="contact-intro">
                 <strong>
                   Cuéntanos qué necesitas resolver. Nosotros ayudamos a ordenar

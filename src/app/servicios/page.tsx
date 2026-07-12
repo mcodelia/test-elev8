@@ -138,6 +138,14 @@ export default function ServiciosPage() {
                   Cinco capacidades. Un solo sistema.
                 </h1>
               </div>
+              <div className="services-hero-map" aria-hidden="true">
+                {radarItems.map(([code, title]) => (
+                  <span key={code}>
+                    <b>{code}</b>
+                    {title}
+                  </span>
+                ))}
+              </div>
               <div className="services-intro">
                 <strong>
                   El ecosistema Elev8 conecta criterio, diseño, tecnología y

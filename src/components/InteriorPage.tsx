@@ -60,6 +60,12 @@ export default function InteriorPage({ content }: { content: InteriorPageContent
                 <div className="page-label">{copy.eyebrow}</div>
                 <h1 className="interior-title">{copy.title}</h1>
               </div>
+              <div className="interior-hero-art" aria-hidden="true">
+                <span>{copy.chips[0]}</span>
+                <span>{copy.sections[0]?.label}</span>
+                <span>{content.accent}</span>
+                <span>{copy.chips[copy.chips.length - 1]}</span>
+              </div>
               <div className="interior-intro">
                 <strong>{copy.lead}</strong>
                 <p>{copy.intro}</p>

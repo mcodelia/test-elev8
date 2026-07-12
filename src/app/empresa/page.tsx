@@ -40,6 +40,11 @@ export default function EmpresaPage() {
                   Existimos para convertir complejidad en <em>dirección</em>.
                 </h1>
               </div>
+              <div className="company-hero-principles" aria-hidden="true">
+                <span>Criterio</span>
+                <span>Claridad</span>
+                <span>Continuidad</span>
+              </div>
               <div className="company-intro">
                 <strong>
                   Elev8 ayuda a tomar mejores decisiones antes de construir.

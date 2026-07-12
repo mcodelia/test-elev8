@@ -171,6 +171,12 @@ export default function SolucionesPage() {
                   Entra por el problema. Sal con una <em>ruta.</em>
                 </h1>
               </div>
+              <div className="solutions-hero-path" aria-hidden="true">
+                <span>Problema</span>
+                <span>Decisión</span>
+                <span>Ruta</span>
+                <span>Resultado</span>
+              </div>
               <div className="solutions-intro">
                 <strong>
                   Nadie llega buscando una lista. Llega con algo que necesita
