@@ -87,22 +87,16 @@ export default function InteriorPage({ content }: { content: InteriorPageContent
           </div>
         </header>
 
-        <div className="interior-strip" aria-hidden="true">
-          <span>
-            {copy.eyebrow} — {copy.lead} — {copy.panelTitle} — {copy.eyebrow} — {copy.lead} —
-          </span>
-        </div>
-
         <section className="interior-chapter interior-chapter-cards">
           <div className="wrap">
             <div className="interior-chapter-head">
               <div className="eyebrow">
-                {language === "en" ? "Core" : "Núcleo"}
+                {language === "en" ? "Scope" : "Alcance"}
               </div>
               <p>
                 {language === "en"
-                  ? "The essential decisions behind this path."
-                  : "Las decisiones esenciales detrás de esta ruta."}
+                  ? "What this page usually includes."
+                  : "Lo que normalmente incluye esta página."}
               </p>
             </div>
             <div className="interior-section-grid">
@@ -121,11 +115,11 @@ export default function InteriorPage({ content }: { content: InteriorPageContent
           <div className="wrap interior-process">
             <div>
               <div className="eyebrow">{language === "en" ? "Method" : "Método"}</div>
-              <h2>{language === "en" ? "How we move." : "Cómo avanzamos."}</h2>
+              <h2>{language === "en" ? "How it moves." : "Cómo avanza."}</h2>
               <p className="lead">
                 {language === "en"
-                  ? "A compact path from diagnosis to something useful, visible and ready to evolve."
-                  : "Una ruta breve desde diagnóstico hasta una base útil, visible y preparada para evolucionar."}
+                  ? "A short sequence from context to something ready to use."
+                  : "Una secuencia corta desde contexto hasta algo listo para usar."}
               </p>
             </div>
 
@@ -145,7 +139,7 @@ export default function InteriorPage({ content }: { content: InteriorPageContent
           <div className="wrap interior-questions">
             <div>
               <div className="eyebrow">{language === "en" ? "Signals" : "Señales"}</div>
-              <h2>{language === "en" ? "When this page makes sense." : "Cuándo tiene sentido esta página."}</h2>
+              <h2>{language === "en" ? "Use it when..." : "Úsala cuando..."}</h2>
             </div>
             <div className="interior-question-list">
               {copy.questions.map((question) => (

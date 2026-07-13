@@ -1348,3 +1348,463 @@ h2,
   .footer-index a{font-size:clamp(22px,7vw,31px)}
   .mobile-menu-link{font-size:clamp(26px,7.4vw,34px);line-height:1}
 }
+
+/* Dirección de arte: edición y calma visual */
+:root{--line:rgba(15,15,12,.14);--muted:#706d66}
+
+section{padding:clamp(64px,7.2vw,124px) 0}
+.section-head{margin-bottom:clamp(34px,4.6vw,64px)}
+
+h1,
+.services-title,
+.solutions-page .solutions-title,
+.resources-page .resources-title,
+.company-page .company-title,
+.contact-page .contact-title{
+  font-size:clamp(38px,3.62vw,88px);
+  line-height:.92;
+  letter-spacing:-.066em;
+  max-width:980px;
+}
+
+h2,
+.company-page h2,
+.contact-page h2{
+  font-size:clamp(32px,3.45vw,58px);
+  line-height:.98;
+  letter-spacing:-.058em;
+}
+
+.lead{font-size:clamp(18px,1.48vw,23px);line-height:1.24;letter-spacing:-.032em}
+p{line-height:1.62}
+
+.hero-copy strong,
+.services-intro strong,
+.solutions-page .solutions-intro strong,
+.resources-page .resources-intro strong,
+.company-page .company-intro strong,
+.contact-page .contact-intro strong,
+.interior-page .interior-intro strong{
+  font-size:clamp(19px,1.45vw,26px);
+  line-height:1.15;
+  letter-spacing:-.035em;
+}
+
+.hero-main,
+.services-hero-main,
+.solutions-page .solutions-hero-main,
+.resources-page .resources-hero-main,
+.company-page .company-hero-main,
+.contact-page .contact-hero-main,
+.interior-page .interior-hero-main{
+  border-radius:22px;
+  padding:clamp(24px,3.1vw,48px);
+}
+
+.hero-main:before,
+.services-hero-main:before,
+.solutions-page .solutions-hero-main:before,
+.resources-page .resources-hero-main:before,
+.company-page .company-hero-main:before,
+.contact-page .contact-hero-main:before,
+.interior-page .interior-hero-main:before{
+  inset:22px;
+  border-style:solid;
+  border-color:rgba(16,16,13,.1);
+  border-radius:18px;
+}
+
+.hero-main:after,
+.services-hero-main:after,
+.solutions-page .solutions-hero-main:after,
+.resources-page .resources-hero-main:after,
+.company-page .company-hero-main:after,
+.contact-page .contact-hero-main:after,
+.interior-page .interior-hero-main:after{
+  opacity:.42;
+  box-shadow:none;
+}
+
+.solutions-page .solutions-title em,
+.resources-page .resources-title em,
+.company-page .company-title em,
+.contact-page .contact-title em{
+  color:inherit;
+  background:none;
+}
+
+.hero-system,
+.services-hero-map,
+.solutions-page .solutions-hero-path,
+.resources-page .resources-hero-edition,
+.company-page .company-hero-principles,
+.contact-page .contact-hero-brief,
+.interior-page .interior-hero-art{
+  margin-top:clamp(22px,3.4vw,46px);
+}
+
+.hero-system span,
+.services-hero-map span,
+.solutions-page .solutions-hero-path span,
+.contact-page .contact-hero-brief span,
+.interior-page .interior-hero-art span{
+  min-height:54px;
+  font-size:10px;
+  letter-spacing:.12em;
+}
+
+.company-page .company-hero-principles span{
+  min-height:76px;
+  font-size:clamp(18px,1.8vw,28px);
+}
+
+.poster,
+.mini-card,
+.services-panel,
+.solutions-page .solutions-panel,
+.resources-page .resources-panel,
+.company-page .company-side,
+.contact-page .contact-panel,
+.interior-page .interior-panel{
+  border-radius:22px;
+}
+
+.poster:before{opacity:.07}
+.poster:after,
+.services-panel:after,
+.solutions-page .solutions-panel:after,
+.resources-page .resources-panel:after,
+.company-page .company-side:after,
+.contact-page .contact-panel:after,
+.interior-page .interior-panel:after{
+  opacity:.45;
+  filter:none;
+  background:none;
+}
+
+.poster h2{font-size:clamp(30px,2.9vw,48px);line-height:.96;letter-spacing:-.06em}
+.mini-card h3{font-size:clamp(24px,2.35vw,38px);line-height:.98;letter-spacing:-.055em}
+.ticker span,
+.interior-strip span{font-size:clamp(15px,1.18vw,20px);letter-spacing:-.02em}
+
+.logic-card,
+.offer-card,
+.track,
+.route-card,
+.detail-card,
+.solutions-page .outcome-card,
+.resources-page .topic-card,
+.resources-page .seo-card,
+.contact-page .route-card,
+.interior-card{
+  border-radius:18px;
+  box-shadow:none;
+}
+
+.logic-card:hover,
+.offer-card:hover,
+.route-card:hover,
+.detail-card:hover,
+.solutions-page .outcome-card:hover,
+.resources-page .topic-card:hover,
+.contact-page .route-card:hover,
+.interior-card:hover{
+  box-shadow:none;
+  transform:translateY(-3px);
+}
+
+.logic-card:nth-child(even){transform:none}
+.slash,
+.offer-card:after,
+.offer-feature .big-number,
+.contact-page .project-form:after,
+.contact-page .route-card:before,
+.interior-card-mark{
+  display:none;
+}
+
+.service{padding:24px 0}
+.service:hover{padding-left:8px;background:transparent}
+.service h3,
+.track h3,
+.offer-card h3,
+.solutions-page .outcome-card h3,
+.resources-page .topic-card h3{
+  font-size:clamp(24px,2.5vw,40px);
+  line-height:.98;
+  letter-spacing:-.058em;
+}
+
+.offer-feature h3,
+.solutions-page .outcome-feature h3,
+.resources-page .topic-feature h3{
+  font-size:clamp(30px,3.6vw,58px);
+  line-height:.95;
+}
+
+.capability-row h3,
+.solutions-page .solution-row h3,
+.resources-page .hub-row h3{
+  font-size:clamp(25px,2.85vw,46px);
+  line-height:.96;
+  letter-spacing:-.06em;
+}
+
+.route-left h2,
+.campaign h2,
+.company-page .company-side h2,
+.contact-page .contact-panel h2,
+.interior-page .interior-panel h2{
+  font-size:clamp(28px,3vw,48px);
+  line-height:1;
+}
+
+.signal-board,
+.combination-board,
+.solutions-page .system-board,
+.resources-page .calendar-board,
+.contact-page .project-form,
+.interior-cta{
+  border-radius:22px;
+  box-shadow:none;
+}
+
+.signal-node{
+  border-radius:18px;
+  box-shadow:none;
+}
+
+.signal-node:before,
+.signal-node:after{
+  display:none;
+}
+
+.signal-node:hover,
+.signal-node:nth-child(4):hover{
+  box-shadow:none;
+  background:rgba(255,255,255,.06);
+  transform:translateY(-3px);
+}
+
+.footer{margin-top:72px;padding:78px 0 42px}
+.footer h2{font-size:clamp(44px,7.4vw,112px);line-height:.92;letter-spacing:-.074em}
+
+.interior-page .interior-title{
+  font-size:clamp(38px,4.2vw,86px);
+  line-height:.94;
+  letter-spacing:-.064em;
+}
+
+.interior-page .interior-hero-rule{margin-bottom:clamp(34px,5vw,82px)}
+.interior-servicios .interior-card:nth-child(1){min-height:350px}
+.interior-soluciones .interior-card:nth-child(1){min-height:470px}
+
+@media(max-width:980px){
+  section{padding:64px 0}
+  h1,
+  .services-title,
+  .solutions-page .solutions-title,
+  .resources-page .resources-title,
+  .company-page .company-title,
+  .contact-page .contact-title,
+  .interior-page .interior-title{
+    font-size:clamp(34px,8.5vw,58px);
+    line-height:.98;
+    letter-spacing:-.056em;
+  }
+  h2,
+  .company-page h2,
+  .contact-page h2{font-size:clamp(30px,7.2vw,46px);line-height:1}
+  .hero-system,
+  .services-hero-map,
+  .solutions-page .solutions-hero-path,
+  .resources-page .resources-hero-edition,
+  .company-page .company-hero-principles,
+  .contact-page .contact-hero-brief,
+  .interior-page .interior-hero-art{display:none}
+}
+
+@media(max-width:520px){
+  :root{--pad:18px}
+  section{padding:52px 0}
+  .hero-main,
+  .services-hero-main,
+  .solutions-page .solutions-hero-main,
+  .resources-page .resources-hero-main,
+  .company-page .company-hero-main,
+  .contact-page .contact-hero-main,
+  .interior-page .interior-hero-main,
+  .poster,
+  .mini-card,
+  .services-panel,
+  .solutions-page .solutions-panel,
+  .resources-page .resources-panel,
+  .company-page .company-side,
+  .contact-page .contact-panel,
+  .interior-page .interior-panel{border-radius:16px;padding:20px}
+  h1,
+  .services-title,
+  .solutions-page .solutions-title,
+  .resources-page .resources-title,
+  .company-page .company-title,
+  .contact-page .contact-title,
+  .interior-page .interior-title{
+    font-size:clamp(32px,9.4vw,42px);
+    line-height:1;
+    letter-spacing:-.05em;
+  }
+  .lead,
+  .hero-copy strong,
+  .services-intro strong,
+  .solutions-page .solutions-intro strong,
+  .resources-page .resources-intro strong,
+  .company-page .company-intro strong,
+  .contact-page .contact-intro strong,
+  .interior-page .interior-intro strong{font-size:clamp(18px,5.2vw,22px);line-height:1.2}
+  .logic-card,
+  .offer-card,
+  .track,
+  .route-card,
+  .detail-card,
+  .solutions-page .outcome-card,
+  .resources-page .topic-card,
+  .contact-page .route-card,
+  .interior-card{border-radius:16px}
+}
+
+/* Ajuste puntual: Soluciones con menos ruido y mejor responsive */
+.solutions-page .solutions-hero-grid{
+  grid-template-columns:minmax(0,1.06fr) minmax(340px,.48fr);
+  min-height:min(720px, calc(100vh - 144px));
+}
+
+.solutions-page .solutions-panel{
+  min-height:auto;
+}
+
+.solutions-page .solutions-panel:after{
+  display:none;
+}
+
+.solutions-page .solutions-radar-item{
+  grid-template-columns:58px minmax(0,1fr) 26px;
+  gap:18px;
+  padding:22px 0;
+}
+
+.solutions-page .solutions-radar-num{
+  width:46px;
+  height:42px;
+}
+
+.solutions-page .solutions-radar-item h3{
+  font-size:clamp(22px,2vw,34px);
+  line-height:.95;
+  letter-spacing:-.06em;
+}
+
+.solutions-page .solution-row{
+  grid-template-columns:64px minmax(210px,.72fr) minmax(220px,1fr) minmax(160px,.52fr) 56px;
+  gap:22px;
+  padding:26px 0;
+}
+
+.solutions-page .solution-row:hover{
+  padding-left:8px;
+}
+
+.solutions-page .solution-mark{
+  width:46px;
+  height:46px;
+}
+
+.solutions-page .solution-row h3{
+  font-size:clamp(24px,2.55vw,40px);
+  line-height:.98;
+}
+
+.solutions-page .fit-left h2,
+.solutions-page .method-left h2{
+  font-size:clamp(28px,3vw,48px);
+  line-height:1;
+}
+
+.solutions-page .fit-item{
+  grid-template-columns:42px minmax(0,1fr) minmax(120px,.32fr);
+  gap:18px;
+  padding:22px 0;
+}
+
+.solutions-page .fit-item strong{
+  font-size:clamp(19px,1.75vw,28px);
+  line-height:1.08;
+}
+
+.solutions-page .method-step{
+  grid-template-columns:96px minmax(0,.78fr) minmax(0,1fr);
+  gap:20px;
+  padding:24px 0;
+}
+
+.solutions-page .method-step strong{
+  font-size:clamp(20px,1.8vw,30px);
+  line-height:1.02;
+}
+
+@media(max-width:1180px){
+  .solutions-page .solutions-hero-grid{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+
+  .solutions-page .solution-row{
+    grid-template-columns:54px minmax(0,1fr);
+  }
+}
+
+@media(max-width:980px){
+  .solutions-page .solution-row{
+    display:block;
+    padding:24px 0;
+  }
+
+  .solutions-page .solution-row a{
+    display:grid;
+    grid-template-columns:46px minmax(0,1fr);
+    gap:10px 16px;
+    align-items:start;
+  }
+
+  .solutions-page .solution-row h3,
+  .solutions-page .solution-row p,
+  .solutions-page .solution-tags,
+  .solutions-page .circle-link{
+    grid-column:2;
+  }
+
+  .solutions-page .fit-item,
+  .solutions-page .method-step{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:640px){
+  .solutions-page .solutions-radar-item{
+    grid-template-columns:44px minmax(0,1fr) 20px;
+    gap:12px;
+    padding:18px 0;
+  }
+
+  .solutions-page .solutions-radar-num{
+    width:40px;
+    height:38px;
+  }
+
+  .solutions-page .solution-row h3{
+    font-size:clamp(24px,7vw,32px);
+  }
+
+  .solutions-page .solution-tags{
+    gap:6px;
+  }
+}

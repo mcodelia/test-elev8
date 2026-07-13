@@ -18,51 +18,15 @@ const formPoints = [
 ];
 
 const nextSteps = [
-  ["Paso 01", "Revisión inicial", "Leemos el contexto, identificamos la necesidad principal y vemos si conviene entrar por estrategia, marca, web, automatización, espacio físico o solución integral."],
-  ["Paso 02", "Respuesta orientadora", "Respondemos con preguntas clave, una recomendación preliminar o una invitación a una conversación breve para ordenar mejor el alcance."],
-  ["Paso 03", "Diagnóstico o reunión", "Cuando el proyecto lo requiere, revisamos lo existente y aterrizamos prioridades antes de convertir la necesidad en propuesta."],
-  ["Paso 04", "Propuesta de ruta", "Definimos alcance, etapas, entregables y próximos pasos para que el proyecto se pueda ejecutar sin confusión."],
-];
-
-const routes = [
-  {
-    id: "LNZ",
-    title: "Lanzar un negocio",
-    href: "/soluciones/lanzar-negocio.html",
-    text: "Para construir desde cero marca, sitio, contenido y base comercial.",
-  },
-  {
-    id: "MOD",
-    title: "Modernizar una empresa",
-    href: "/soluciones/modernizar-empresa.html",
-    text: "Para actualizar presencia, discurso, sistemas visuales y experiencia digital.",
-  },
-  {
-    id: "AUT",
-    title: "Automatizar procesos",
-    href: "/soluciones/automatizar-procesos.html",
-    text: "Para reducir trabajo manual, conectar herramientas e integrar IA.",
-  },
-  {
-    id: "ESP",
-    title: "Renovar un espacio",
-    href: "/soluciones/renovar-espacio-fisico.html",
-    text: "Para llevar la marca a oficinas, locales, señalética o puntos físicos.",
-  },
-  {
-    id: "360",
-    title: "Proyecto 360",
-    href: "/soluciones/proyecto-360.html",
-    text: "Para alinear estrategia, marca, web, tecnología y experiencia física.",
-    featured: true,
-  },
+  ["Paso 01", "Leemos", "Revisamos necesidad, contexto y urgencia."],
+  ["Paso 02", "Respondemos", "Te sugerimos una entrada o pedimos una conversación breve."],
+  ["Paso 03", "Definimos", "Aterrizamos alcance, etapas y próximos pasos."],
 ];
 
 const faqs = [
-  ["¿Necesito tener un brief listo?", "No. El formulario está pensado para partir incluso cuando solo existe una idea, una necesidad o un problema recurrente."],
-  ["¿Puedo pedir solo una parte del proyecto?", "Sí. Elev8 puede entrar por una capacidad específica o construir una ruta integral si el problema necesita varias áreas conectadas."],
-  ["¿Trabajan proyectos pequeños?", "Sí, siempre que exista una necesidad clara y una oportunidad real de generar valor. También podemos proponer una primera etapa si el proyecto completo aún no tiene sentido."],
-  ["¿Cuándo conviene un proyecto 360?", "Cuando la empresa necesita alinear varias capas al mismo tiempo: estrategia, identidad, web, automatización, contenido y experiencia física."],
+  ["¿Necesito tener un brief listo?", "No. Basta con explicar qué quieres cambiar y qué existe hoy."],
+  ["¿Puedo pedir solo una parte?", "Sí. Podemos entrar por marca, web, automatización, contenido o espacio físico."],
+  ["¿Qué pasa si no sé qué necesito?", "Describe el problema. Nosotros proponemos la entrada más lógica."],
 ];
 
 export default function ContactoPage() {
@@ -90,13 +54,11 @@ export default function ContactoPage() {
               </div>
               <div className="contact-intro">
                 <strong>
-                  Cuéntanos qué necesitas resolver. Nosotros ayudamos a ordenar
-                  la ruta.
+                  Cuéntanos qué quieres cambiar y qué existe hoy.
                 </strong>
                 <p>
-                  No necesitas llegar con un brief perfecto. Basta con una
-                  necesidad clara: lanzar, modernizar, automatizar, renovar o
-                  construir algo completo. Desde ahí definimos el camino correcto.
+                  No necesitas un brief perfecto. Necesitamos contexto suficiente
+                  para responder con criterio.
                 </p>
               </div>
             </div>
@@ -104,11 +66,10 @@ export default function ContactoPage() {
             <aside className="contact-panel">
               <div className="panel-top">
                 <span className="panel-kicker">Entrada / Proyecto</span>
-                <h2>Partimos por el problema, no por la lista de servicios.</h2>
+                <h2>El primer mensaje debe ahorrar tiempo.</h2>
                 <p>
-                  Una buena conversación inicial debe identificar el objetivo, el
-                  contexto, la urgencia y el tipo de resultado que el negocio
-                  espera lograr.
+                  Mientras más concreta sea la situación, mejor podemos recomendar
+                  una ruta, una capacidad o una primera etapa.
                 </p>
 
                 <nav className="quick-list" aria-label="Rutas rápidas para iniciar un proyecto">
@@ -133,52 +94,10 @@ export default function ContactoPage() {
 
         <div className="index-strip" aria-hidden="true">
           <span>
-            Contacto — Contexto inicial — Diagnóstico — Ruta correcta — Propuesta —
-            Contacto — Contexto inicial — Diagnóstico — Ruta correcta — Propuesta —
+            Contacto — Contexto — Alcance — Próximo paso — Contacto — Contexto —
+            Alcance — Próximo paso —
           </span>
         </div>
-
-        <section id="criterio">
-          <div className="wrap split">
-            <div className="split-label">
-              <div className="eyebrow">Antes del formulario</div>
-            </div>
-            <div className="editorial">
-              <h2>El objetivo no es llenar campos. Es entender bien el punto de partida.</h2>
-              <p className="lead">
-                Esta página debe convertir interés en conversación útil: pedir lo
-                justo, dar confianza y explicar qué pasa después de enviar la
-                solicitud.
-              </p>
-
-              <div className="text-columns">
-                <div>
-                  <p>
-                    Elev8 trabaja proyectos que mezclan estrategia, marca, web,
-                    automatización, IA y experiencia física. Por eso el contacto
-                    no debería ser solo “nombre, correo y mensaje”.
-                  </p>
-                  <p>
-                    Debe ayudar a clasificar la necesidad sin hacer que el usuario
-                    sienta que está postulando a la NASA con un formulario de 48
-                    pasos.
-                  </p>
-                </div>
-                <div>
-                  <p>
-                    La estructura está pensada para capturar señales comerciales
-                    reales: tipo de proyecto, etapa del negocio, urgencia,
-                    presupuesto referencial y contexto.
-                  </p>
-                  <p>
-                    Con eso se puede responder mejor, preparar una primera reunión
-                    más útil y evitar propuestas desenfocadas.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section id="formulario">
           <div className="wrap project-form-wrap">
@@ -186,9 +105,7 @@ export default function ContactoPage() {
               <div className="eyebrow">Contexto inicial</div>
               <h2>Cuéntanos lo esencial.</h2>
               <p>
-                Mientras más claro sea el contexto, mejor podemos recomendar la
-                entrada correcta: servicios específicos, solución por necesidad o
-                proyecto 360.
+                Cuatro señales bastan para empezar bien.
               </p>
 
               <div className="form-points">
@@ -262,9 +179,7 @@ export default function ContactoPage() {
                     <option>Necesito ayuda para definir alcance</option>
                   </select>
                   <div className="helper">
-                    No es para encasillar el proyecto. Es para recomendar una ruta
-                    realista y no diseñar castillos en el aire con presupuesto de
-                    volantín.
+                    Sirve para proponer un alcance realista desde el inicio.
                   </div>
                 </div>
                 <div className="field full">
@@ -288,8 +203,7 @@ export default function ContactoPage() {
 
               <div className="form-actions">
                 <small>
-                  Después de enviar, revisamos el contexto y respondemos con el
-                  siguiente paso sugerido.
+                  Respondemos con una recomendación inicial o una pregunta clave.
                 </small>
                 <button className="btn dark-btn" type="submit">
                   Enviar solicitud
@@ -305,11 +219,10 @@ export default function ContactoPage() {
               <div className="eyebrow">Qué pasa después</div>
             </div>
             <div className="editorial">
-              <h2>Del primer mensaje a una ruta clara.</h2>
+              <h2>Qué pasa después.</h2>
               <p className="lead">
-                El contacto no termina cuando llega el formulario. Ahí recién
-                empieza la parte importante: entender, priorizar y proponer con
-                sentido.
+                Tres pasos simples para no convertir el inicio en una reunión
+                eterna.
               </p>
 
               <div className="steps-list">
@@ -321,42 +234,6 @@ export default function ContactoPage() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="rutas">
-          <div className="wrap">
-            <div className="split route-heading">
-              <div className="split-label">
-                <div className="eyebrow">También puedes partir por una ruta</div>
-              </div>
-              <div className="editorial">
-                <h2>Si ya sabes el tipo de problema, entra directo por ahí.</h2>
-                <p className="lead">
-                  Estas rutas ayudan a ordenar mejor el contacto inicial y
-                  conectar la conversación con la solución correcta.
-                </p>
-              </div>
-            </div>
-
-            <div className="route-board">
-              {routes.map((route) => (
-                <a
-                  className={`route-card${route.featured ? " feature" : ""}`}
-                  data-id={route.id}
-                  href={route.href}
-                  key={route.id}
-                >
-                  <div>
-                    <h3>{route.title}</h3>
-                    <p>{route.text}</p>
-                  </div>
-                  <span>
-                    Ver ruta <span aria-hidden="true" />
-                  </span>
-                </a>
-              ))}
             </div>
           </div>
         </section>

@@ -4,29 +4,29 @@ import Header from "@/components/Header";
 const focusSteps = [
   {
     icon: "↓",
-    title: "Diagnóstico",
-    text: "Encontramos el bloqueo real.",
+    title: "Leer",
+    text: "Qué pasa y dónde duele.",
   },
   {
     icon: "→",
-    title: "Dirección",
-    text: "Definimos qué mover primero.",
+    title: "Elegir",
+    text: "Qué mover primero.",
   },
   {
     icon: "✦",
-    title: "Diseño",
-    text: "Damos forma a la decisión.",
+    title: "Crear",
+    text: "La pieza que falta.",
   },
   {
     icon: "",
     rotateIcon: true,
-    title: "Ejecución",
-    text: "Llevamos la idea al mundo.",
+    title: "Lanzar",
+    text: "Sin perder consistencia.",
   },
   {
     icon: "∞",
-    title: "Evolución",
-    text: "Dejamos una base para crecer.",
+    title: "Medir",
+    text: "Qué aprende el sistema.",
   },
 ];
 
@@ -34,31 +34,31 @@ const services = [
   {
     label: "Estrategia",
     title: "Estrategia y crecimiento",
-    text: "Dirección antes de producir.",
+    text: "Decisiones antes de inversión.",
     href: "/servicios/strategy-growth.html",
   },
   {
     label: "Marca",
     title: "Marca y creatividad",
-    text: "Percepción clara y reconocible.",
+    text: "Identidad, voz y presencia.",
     href: "/servicios/brand-creative.html",
   },
   {
     label: "Digital",
     title: "Experiencias digitales",
-    text: "Sitios y productos que orientan.",
+    text: "Webs y productos útiles.",
     href: "/servicios/digital-experiences.html",
   },
   {
     label: "Inteligencia",
     title: "Soluciones inteligentes",
-    text: "Menos fricción. Más sistema.",
+    text: "Automatización aplicada.",
     href: "/servicios/smart-solutions.html",
   },
   {
     label: "Físico",
     title: "Marca física",
-    text: "La marca fuera de la pantalla.",
+    text: "Espacios y puntos reales.",
     href: "/servicios/physical-brand.html",
   },
 ];
@@ -66,72 +66,48 @@ const services = [
 const solutionRoutes = [
   {
     step: "Lanzar",
-    title: "Ruta Lanzamiento",
+    title: "Lanzar",
     chips: ["Marca", "Web", "Contenido"],
-    text: "Para salir al mercado con claridad.",
+    text: "Marca, web y mensaje mínimo para salir bien.",
     action: "Descubrir ruta",
   },
   {
     step: "Mejorar",
-    title: "Ruta evolución",
+    title: "Modernizar",
     chips: ["Reposicionamiento", "Experiencia", "Ventas"],
-    text: "Para verse al nivel de lo que ya eres.",
+    text: "Presencia actualizada para vender con más confianza.",
     action: "Explorar ruta",
   },
   {
     step: "Integrar",
-    title: "Ruta 360",
+    title: "Integrar",
     chips: ["Estrategia", "Marca", "Web", "Inteligencia", "Físico"],
-    text: "Para ordenar marca, web, operación y experiencia.",
+    text: "Marca, web, operación y experiencia bajo una misma lógica.",
     action: "Ver solución",
     featured: true,
   },
   {
     step: "Optimizar",
-    title: "Ruta inteligente",
+    title: "Automatizar",
     chips: ["IA", "Automatización", "Sistemas"],
-    text: "Para equipos que necesitan trabajar mejor.",
+    text: "Menos tareas repetidas y más flujo operativo.",
     action: "Conocer ruta",
   },
   {
     step: "Materializar",
-    title: "Ruta Espacio",
+    title: "Materializar",
     chips: ["Letreros", "Oficinas", "Vehículos"],
-    text: "Para hacer visible la marca en el mundo real.",
+    text: "Señalética, gráfica y presencia física coherente.",
     action: "Explorar ruta",
   },
 ];
 
 const clientNeeds = [
-  ["Necesito crear una marca desde cero.", "Ruta Lanzamiento"],
-  ["Mi empresa se ve antigua o poco profesional.", "Ruta evolución"],
-  ["Necesito una página web que venda mejor.", "Experiencias digitales"],
-  ["Tengo procesos manuales y mucho Excel.", "Soluciones inteligentes"],
-  ["Necesito letreros, impresión o gráfica física.", "Marca física"],
-  ["Quiero ordenar todo mi negocio visual y digitalmente.", "Ruta 360"],
-];
-
-const marketingSignals = [
-  {
-    label: "Decisión 01",
-    title: "Detectar",
-    text: "Qué no está funcionando.",
-  },
-  {
-    label: "Decisión 02",
-    title: "Priorizar",
-    text: "Qué cambia primero.",
-  },
-  {
-    label: "Decisión 03",
-    title: "Construir",
-    text: "Qué pieza mueve el negocio.",
-  },
-  {
-    label: "Decisión 04",
-    title: "Avanzar",
-    text: "Cuál es el próximo paso.",
-  },
+  ["Estoy lanzando algo nuevo.", "Lanzar"],
+  ["La empresa creció, pero la marca no.", "Modernizar"],
+  ["La web no explica ni convierte.", "Digital"],
+  ["El equipo opera con demasiado trabajo manual.", "Automatizar"],
+  ["El espacio físico no representa la marca.", "Materializar"],
 ];
 
 function SectionHeading({
@@ -165,7 +141,7 @@ export default function Home() {
             <div className="hero-main">
               <div>
                 <div className="kicker">Ecosistema creativo y digital</div>
-                <h1>Conectamos estrategia, creatividad y tecnología para construir empresas más sólidas.</h1>
+                <h1>Diseñamos marcas, webs y sistemas para negocios que necesitan avanzar con más foco.</h1>
               </div>
               <div className="hero-system" aria-hidden="true">
                 <span>Strategy</span>
@@ -176,11 +152,11 @@ export default function Home() {
               </div>
               <div className="hero-copy">
                 <strong>
-                  Elev8 existe para convertir complejidad en dirección.
+                  Elev8 une criterio creativo, diseño digital y ejecución práctica.
                 </strong>
                 <p>
-                  Un estudio para marcas que necesitan claridad, criterio y ejecución
-                  en un mismo lugar.
+                  Trabajamos con empresas que necesitan verse mejor, vender mejor
+                  u operar con menos fricción.
                 </p>
               </div>
             </div>
@@ -205,10 +181,10 @@ export default function Home() {
               </div>
               <div className="mini-card">
                 <p>
-                  Una entrada para ordenar lo visual, lo digital, lo operativo y
-                  lo físico bajo una misma intención.
+                  Estrategia cuando falta foco. Diseño cuando falta forma.
+                  Tecnología cuando falta flujo.
                 </p>
-                <h3>Una dirección.</h3>
+                <h3>Menos ruido.</h3>
               </div>
             </div>
           </div>
@@ -216,9 +192,8 @@ export default function Home() {
 
         <div className="ticker" aria-hidden="true">
           <span>
-            Pensar antes de producir — Diseñar para decidir — Construir sistemas —
-            Reducir fricción — Elevar percepción — Crear continuidad — Pensar antes de producir —
-            Diseñar para decidir — Construir sistemas — Reducir fricción —
+            Marca — Web — Automatización — Espacio — Contenido — Estrategia —
+            Marca — Web — Automatización — Espacio — Contenido — Estrategia —
           </span>
         </div>
 
@@ -226,10 +201,9 @@ export default function Home() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Enfoque"
-              title="Primero el problema. Luego la forma."
+              title="Una forma simple de trabajar."
             >
-              El método debe entenderse en segundos. Mirar, ordenar, construir,
-              mejorar.
+              Antes de producir, elegimos qué problema vale la pena resolver.
             </SectionHeading>
 
             <div className="logic">
@@ -256,9 +230,9 @@ export default function Home() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Servicios"
-              title="Un ecosistema. Cinco formas de entrar."
+              title="Qué podemos construir."
             >
-              Separadas cuando conviene. Conectadas cuando el negocio lo pide.
+              Cinco capacidades. Se usan solas o combinadas según el caso.
             </SectionHeading>
 
             <div className="services">
@@ -281,10 +255,9 @@ export default function Home() {
           <div className="wrap">
             <SectionHeading
               eyebrow="Rutas de solución"
-              title="Elige por dónde empezar."
+              title="Si no sabes qué pedir, parte por la situación."
             >
-              Cada ruta abre una conversación distinta. Lanzar, mejorar, integrar,
-              optimizar o materializar.
+              Las rutas traducen problemas de negocio en próximos pasos concretos.
             </SectionHeading>
 
             <div className="offer-board">
@@ -324,9 +297,9 @@ export default function Home() {
           <div className="wrap route">
             <div className="route-left">
               <div className="eyebrow">Necesidades del cliente</div>
-              <h2>Encuentra tu puerta de entrada.</h2>
+              <h2>Reconoce el punto de partida.</h2>
               <p>
-                Si reconoces una frase, ya tienes una ruta.
+                Cinco señales comunes. Una conversación posible.
               </p>
             </div>
 
@@ -342,33 +315,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="marketing">
-          <div className="wrap campaign">
-            <div className="campaign-copy">
-              <div>
-                <div className="eyebrow">Decisiones</div>
-                <h2>Menos ruido. Mejores movimientos.</h2>
-              </div>
-              <p className="lead">
-                Antes de producir más piezas, conviene saber qué decisión falta.
-              </p>
-            </div>
-
-            <div className="signal-board">
-              <div className="signal-map">
-                {marketingSignals.map((signal) => (
-                  <article className="signal-node" key={signal.label}>
-                    <div>
-                      <em>{signal.label}</em>
-                      <h3>{signal.title}</h3>
-                    </div>
-                    <p>{signal.text}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

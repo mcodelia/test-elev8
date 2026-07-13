@@ -25,12 +25,6 @@ const featuredArticles = [
   },
 ];
 
-const recentArticles = [
-  ["Marca", "¿Cómo saber si tu identidad ya quedó chica?", "Resolver"],
-  ["Web", "Qué revisar antes de rediseñar una página profesional.", "Aplicar"],
-  ["Operación", "Cuándo automatizar procesos sin sobrediseñar.", "Entender"],
-];
-
 const guideCards = [
   {
     title: "Cómo lanzar una marca desde cero.",
@@ -80,7 +74,7 @@ export default function RecursosPage() {
               <div>
                 <div className="page-label">Recursos Elev8</div>
                 <h1 className="resources-title">
-                  Las mejores decisiones empiezan con mejores <em>preguntas.</em>
+                  Ideas útiles antes de invertir.
                 </h1>
               </div>
               <div className="resources-hero-edition" aria-hidden="true">
@@ -90,11 +84,11 @@ export default function RecursosPage() {
               </div>
               <div className="resources-intro">
                 <strong>
-                  Ideas, casos y guías para entender antes de invertir.
+                  Contenido para detectar señales, comparar opciones y decidir
+                  con más calma.
                 </strong>
                 <p>
-                  Menos teoría. Más señales concretas para decidir qué cambiar,
-                  qué priorizar y qué construir.
+                  Casos, guías y diagnósticos breves. Sin biblioteca infinita.
                 </p>
               </div>
             </div>
@@ -111,7 +105,7 @@ export default function RecursosPage() {
               </div>
               <div className="resources-panel-note">
                 <p>
-                  Empieza por una pregunta. Termina con una ruta más clara.
+                  Lee para decidir, no para acumular pestañas abiertas.
                 </p>
                 <a className="btn panel-cta" href="#destacados">
                   Explorar
@@ -154,34 +148,10 @@ export default function RecursosPage() {
           </div>
         </section>
 
-        <section id="recientes" className="dark">
-          <div className="wrap">
-            <SectionHeading eyebrow="Artículos recientes" title="Problemas que conviene mirar temprano.">
-              Títulos pensados para resolver dudas, no para llenar una biblioteca.
-            </SectionHeading>
-
-            <div className="hub-index">
-              {recentArticles.map(([topic, title, action]) => (
-                <article className="hub-row" key={title}>
-                  <a href="/recursos/blog.html">
-                    <span className="hub-mark">{topic.slice(0, 1)}</span>
-                    <h3>{title}</h3>
-                    <p>{topic}</p>
-                    <div className="hub-tags">
-                      <span className="hub-tag">{action}</span>
-                    </div>
-                    <span className="circle-link" aria-hidden="true" />
-                  </a>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="guias">
           <div className="wrap">
-            <SectionHeading eyebrow="Guías" title="Herramientas para decidir con más calma.">
-              Entradas prácticas para ordenar una conversación antes de pedir una propuesta.
+            <SectionHeading eyebrow="Guías" title="Tres decisiones frecuentes.">
+              Lecturas prácticas para preparar una conversación de proyecto.
             </SectionHeading>
 
             <div className="seo-board">
@@ -203,10 +173,10 @@ export default function RecursosPage() {
           <div className="wrap architecture">
             <div className="architecture-left">
               <div className="eyebrow">Preguntas frecuentes</div>
-              <h2>Si esta pregunta aparece, hay algo que mirar.</h2>
+              <h2>Preguntas que suelen abrir proyectos.</h2>
               <p>
-                Recursos existe para convertir dudas vagas en decisiones más
-                concretas.
+                Si una se repite dentro de la empresa, probablemente hay una
+                oportunidad de mejora.
               </p>
             </div>
             <div className="intent-list">
@@ -226,10 +196,10 @@ export default function RecursosPage() {
             <div className="resource-cta">
               <div>
                 <div className="eyebrow">Siguiente paso</div>
-                <h2>¿Hay una pregunta que se repite en tu empresa?</h2>
+                <h2>¿Tienes una pregunta concreta?</h2>
                 <p>
-                  Puede ser señal de marca, web, operación o experiencia. Podemos
-                  ayudarte a encontrar la ruta.
+                  Escríbenos el contexto. Te diremos si conviene diagnóstico,
+                  guía o proyecto.
                 </p>
               </div>
               <div className="cta-actions">

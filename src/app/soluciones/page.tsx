@@ -9,45 +9,6 @@ const radarItems = [
   ["360", "Proyecto 360", "/soluciones/proyecto-360.html"],
 ];
 
-const outcomes = [
-  {
-    label: "Claridad",
-    title: "Salir con claridad",
-    chips: ["Oferta", "Mensaje", "Ruta"],
-    text: "Cuando hay una idea, pero falta estructura para lanzarla.",
-    action: "Conocer la ruta",
-  },
-  {
-    label: "Percepción",
-    title: "Verse al nivel correcto",
-    chips: ["Marca", "Digital", "Contenido"],
-    text: "Cuando la empresa funciona, pero no se percibe así.",
-    action: "Explorar decisión",
-  },
-  {
-    label: "Sistema",
-    title: "Ordenar todo el recorrido",
-    chips: ["Presencia", "Operación", "Experiencia"],
-    text: "Cuando todo existe, pero nada conversa bien entre sí.",
-    action: "Ver solución",
-    featured: true,
-  },
-  {
-    label: "Operación",
-    title: "Trabajar con menos fricción",
-    chips: ["Procesos", "Datos", "Flujos"],
-    text: "Cuando el equipo pierde tiempo en tareas repetidas.",
-    action: "Resolver operación",
-  },
-  {
-    label: "Experiencia",
-    title: "Hacer visible la marca",
-    chips: ["Espacio", "Señalética", "Ambientación"],
-    text: "Cuando la experiencia física no refleja el estándar del negocio.",
-    action: "Explorar ruta",
-  },
-];
-
 const solutions = [
   {
     mark: "✦",
@@ -118,24 +79,6 @@ const methodSteps = [
   },
 ];
 
-const systemNodes = [
-  {
-    label: "Presencia",
-    title: "Marca + Digital",
-    text: "Para construir percepción, confianza, venta y claridad desde el primer contacto.",
-  },
-  {
-    label: "Operación",
-    title: "Crecimiento + Inteligencia",
-    text: "Para ordenar procesos, conectar herramientas y liberar tiempo operativo.",
-  },
-  {
-    label: "Experiencia",
-    title: "Creatividad + Físico",
-    text: "Para que la marca se vea coherente en presentaciones, contenido, oficinas, locales y puntos de contacto reales.",
-  },
-];
-
 function SectionHeading({
   eyebrow,
   title,
@@ -168,7 +111,7 @@ export default function SolucionesPage() {
               <div>
                 <div className="page-label">Soluciones Elev8</div>
                 <h1 className="solutions-title">
-                  Entra por el problema. Sal con una <em>ruta.</em>
+                  Elige la situación que necesitas resolver.
                 </h1>
               </div>
               <div className="solutions-hero-path" aria-hidden="true">
@@ -179,12 +122,11 @@ export default function SolucionesPage() {
               </div>
               <div className="solutions-intro">
                 <strong>
-                  Nadie llega buscando una lista. Llega con algo que necesita
-                  cambiar.
+                  Cinco rutas para decisiones que suelen llegar mezcladas.
                 </strong>
                 <p>
-                  Esta página ordena ese cambio: lanzar, modernizar, automatizar,
-                  renovar o alinear todo el recorrido.
+                  Parte por el problema. Después definimos si conviene marca,
+                  web, automatización, espacio o una mezcla más precisa.
                 </p>
               </div>
             </div>
@@ -201,8 +143,7 @@ export default function SolucionesPage() {
               </div>
               <div className="solutions-panel-note">
                 <p>
-                  Elige la situación que más se parece a la tuya. Desde ahí
-                  empezamos mejor.
+                  Elige la entrada más cercana. El alcance se ordena después.
                 </p>
                 <a className="btn panel-cta" href="#rutas">
                   Ver rutas
@@ -221,57 +162,13 @@ export default function SolucionesPage() {
           </span>
         </div>
 
-        <section id="enfoque">
-          <div className="wrap">
-            <SectionHeading
-              eyebrow="Enfoque"
-              title="Cada decisión abre una ruta."
-            >
-              La pregunta no es qué contratar. La pregunta es qué necesitas
-              resolver primero.
-            </SectionHeading>
-
-            <div className="outcome-board">
-              {outcomes.map((outcome) => (
-                <article
-                  className={`outcome-card${outcome.featured ? " outcome-feature" : ""}`}
-                  data-label={outcome.label}
-                  key={outcome.title}
-                >
-                  {outcome.featured ? (
-                    <span className="ghost-mark" aria-hidden="true">
-                      E8
-                    </span>
-                  ) : null}
-                  <div>
-                    <h3>{outcome.title}</h3>
-                    <div className="outcome-meta">
-                      {outcome.chips.map((chip) => (
-                        <span className="outcome-chip" key={chip}>
-                          {chip}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <p>{outcome.text}</p>
-                  <div className="outcome-action">
-                    <span>{outcome.action}</span>
-                    <span aria-hidden="true" />
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="rutas" className="dark">
           <div className="wrap">
             <SectionHeading
               eyebrow="Rutas de solución"
-              title="Cinco entradas. Cinco decisiones."
+              title="Una entrada por cada tipo de problema."
             >
-              Cada una conduce a una página específica. Sin pasar por una lista
-              de servicios.
+              Cada ruta resume señales, alcance probable y próximos pasos.
             </SectionHeading>
 
             <div className="solution-index">
@@ -304,9 +201,9 @@ export default function SolucionesPage() {
           <div className="wrap fit-layout">
             <div className="fit-left">
               <div className="eyebrow">Necesidades del cliente</div>
-              <h2>Si esto te pasa, entra por aquí.</h2>
+              <h2>Frases que escuchamos seguido.</h2>
               <p>
-                Menos diagnóstico mental. Más punto de partida.
+                Si una suena familiar, ya tenemos por dónde empezar.
               </p>
             </div>
             <div className="fit-list">
@@ -325,9 +222,9 @@ export default function SolucionesPage() {
           <div className="wrap method-system">
             <div className="method-left">
               <div className="eyebrow">Método Elev8</div>
-              <h2>Del problema a la ruta.</h2>
+              <h2>De señal a plan.</h2>
               <p className="lead">
-                Cuatro pasos. El detalle vive en cada solución.
+                Contexto breve, alcance claro y siguiente paso.
               </p>
             </div>
             <div className="method-steps">
@@ -342,36 +239,14 @@ export default function SolucionesPage() {
           </div>
         </section>
 
-        <section id="sistema">
-          <div className="wrap">
-            <div className="system-board">
-              <div className="eyebrow">Capas conectadas</div>
-              <h2>
-                Una solución no se arma por piezas. Se arma por continuidad.
-              </h2>
-              <div className="system-grid">
-                {systemNodes.map((node) => (
-                  <article className="system-node" key={node.title}>
-                    <div>
-                      <em>{node.label}</em>
-                      <h3>{node.title}</h3>
-                    </div>
-                    <p>{node.text}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="siguiente">
           <div className="wrap">
             <div className="solution-cta">
               <div>
                 <div className="eyebrow">Siguiente nivel</div>
-                <h2>Explora la ruta que más se parece a tu problema.</h2>
+                <h2>¿Cuál situación se parece más a la tuya?</h2>
                 <p>
-                  Cada página profundiza en señales, escenarios y próximos pasos.
+                  Entra por ahí. Si ninguna calza, escríbenos y ordenamos la ruta.
                 </p>
               </div>
               <div className="cta-actions">

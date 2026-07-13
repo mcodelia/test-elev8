@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -14,92 +16,54 @@ const capabilities = [
     mark: "→",
     title: "Estrategia y crecimiento",
     href: "/servicios/strategy-growth.html",
-    text: "Define dirección, prioridades y marco de crecimiento.",
+    text: "Define foco, oportunidad y orden de inversión.",
     cta: "Ver estrategia",
   },
   {
     mark: "✦",
     title: "Marca y creatividad",
     href: "/servicios/brand-creative.html",
-    text: "Da forma a identidad, discurso y presencia visual.",
+    text: "Construye identidad, tono, contenido y presencia.",
     cta: "Explorar capacidad",
   },
   {
     mark: "⌁",
     title: "Experiencias digitales",
     href: "/servicios/digital-experiences.html",
-    text: "Construye sitios, productos e interfaces claras.",
+    text: "Diseña sitios, interfaces y plataformas que se entienden.",
     cta: "Conocer capacidad",
   },
   {
     mark: "∞",
     title: "Soluciones inteligentes",
     href: "/servicios/smart-solutions.html",
-    text: "Conecta automatización, IA, datos y sistemas.",
+    text: "Reduce trabajo manual con flujos, IA e integraciones.",
     cta: "Descubrir más",
   },
   {
     mark: "●",
     title: "Marca física",
     href: "/servicios/physical-brand.html",
-    text: "Lleva la identidad a espacios, soportes y puntos reales.",
+    text: "Lleva la marca a señalética, espacios y soportes físicos.",
     cta: "Explorar servicio",
-  },
-];
-
-const details = [
-  {
-    id: "EST",
-    title: "Estrategia y crecimiento",
-    href: "/servicios/strategy-growth.html",
-    text: "Ordena decisiones antes de diseñar o construir.",
-    items: ["Diagnóstico", "Prioridades", "Hoja de ruta"],
-  },
-  {
-    id: "MAR",
-    title: "Marca y creatividad",
-    href: "/servicios/brand-creative.html",
-    text: "Convierte criterio en identidad, voz y sistema visual.",
-    items: ["Identidad", "Dirección de arte", "Contenido"],
-  },
-  {
-    id: "WEB",
-    title: "Experiencias digitales",
-    href: "/servicios/digital-experiences.html",
-    text: "Diseña presencia digital, interfaces y plataformas.",
-    items: ["Sitios web", "Interfaces", "Plataformas"],
-  },
-  {
-    id: "IA",
-    title: "Soluciones inteligentes",
-    href: "/servicios/smart-solutions.html",
-    text: "Transforma procesos repetitivos en flujos conectados.",
-    items: ["IA", "Automatización", "Integraciones"],
-  },
-  {
-    id: "FIS",
-    title: "Marca física",
-    href: "/servicios/physical-brand.html",
-    text: "Materializa identidad en espacios y soportes concretos.",
-    items: ["Señalética", "Oficinas", "Stands"],
   },
 ];
 
 const combos = [
   {
-    label: "Sistema de presencia",
+    label: "Presencia",
     title: "Marca + Digital",
-    text: "Identidad y experiencia digital trabajando como una sola capa.",
+    text: "Cuando el problema es verse bien y convertir mejor.",
   },
   {
-    label: "Sistema operativo",
+    label: "Operación",
     title: "Crecimiento + Inteligencia",
-    text: "Estrategia, automatización y datos conectando decisiones internas.",
+    text: "Cuando el equipo necesita procesos más livianos.",
   },
   {
-    label: "Sistema tangible",
+    label: "Experiencia",
     title: "Creatividad + Físico",
-    text: "Marca aplicada con continuidad fuera de la pantalla.",
+    text: "Cuando la marca también debe sentirse en el espacio.",
   },
 ];
 
@@ -135,7 +99,7 @@ export default function ServiciosPage() {
               <div>
                 <div className="page-label">Servicios Elev8</div>
                 <h1 className="services-title">
-                  Cinco capacidades. Un solo sistema.
+                  Lo que construimos.
                 </h1>
               </div>
               <div className="services-hero-map" aria-hidden="true">
@@ -148,12 +112,11 @@ export default function ServiciosPage() {
               </div>
               <div className="services-intro">
                 <strong>
-                  El ecosistema Elev8 conecta criterio, diseño, tecnología y
-                  ejecución.
+                  Servicios es el catálogo de capacidades de Elev8.
                 </strong>
                 <p>
-                  Servicios presenta lo que sabemos construir. Las soluciones
-                  explican cuándo y por qué usarlo.
+                  Aquí está el “qué”. Si buscas el “por dónde empiezo”, entra
+                  por Soluciones.
                 </p>
               </div>
             </div>
@@ -170,8 +133,8 @@ export default function ServiciosPage() {
               </div>
               <div className="panel-note">
                 <p>
-                  Capacidades independientes. Mejor resultado cuando trabajan
-                  conectadas.
+                  Cada área puede vivir sola. El valor aparece cuando se combina
+                  con intención.
                 </p>
                 <a className="btn panel-cta" href="#capacidades">
                   Ver capacidades
@@ -189,25 +152,13 @@ export default function ServiciosPage() {
           </span>
         </div>
 
-        <section id="vision">
-          <div className="wrap">
-            <SectionHeading
-              eyebrow="Servicios"
-              title="El sistema se entiende por sus partes."
-            >
-              Cada capacidad tiene una función clara. Juntas forman una base
-              para construir con continuidad.
-            </SectionHeading>
-          </div>
-        </section>
-
         <section id="capacidades" className="dark">
           <div className="wrap">
             <SectionHeading
               eyebrow="Capacidades"
-              title="Las cinco áreas de servicio."
+              title="Cinco áreas, usos distintos."
             >
-              Una lectura rápida. Para profundizar, entra en cada capacidad.
+              Elige una capacidad cuando ya sabes qué necesitas construir.
             </SectionHeading>
 
             <div className="capability-index">
@@ -228,42 +179,11 @@ export default function ServiciosPage() {
           </div>
         </section>
 
-        <section id="detalle">
-          <div className="wrap">
-            <SectionHeading
-              eyebrow="Resumen"
-              title="Qué hace cada capacidad."
-            >
-              Sin metodología completa. Sólo el rol de cada pieza dentro del
-              sistema.
-            </SectionHeading>
-
-            <div className="detail-grid">
-              {details.map((detail) => (
-                <article className="detail-card" data-id={detail.id} key={detail.id}>
-                  <div>
-                    <h3>{detail.title}</h3>
-                    <p>{detail.text}</p>
-                    <ul>
-                      {detail.items.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <a className="btn" href={detail.href}>
-                    Explorar servicio
-                  </a>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="combinaciones">
           <div className="wrap">
             <div className="combination-board">
-              <div className="eyebrow">Capacidades conectadas</div>
-              <h2>Las capacidades se complementan.</h2>
+              <div className="eyebrow">Combinaciones útiles</div>
+              <h2>No todo proyecto necesita todo.</h2>
               <div className="combo-grid">
                 {combos.map((combo) => (
                   <article className="combo" key={combo.title}>
@@ -284,15 +204,19 @@ export default function ServiciosPage() {
             <div className="service-cta">
               <div>
                 <div className="eyebrow">Siguiente nivel</div>
-                <h2>Profundiza en una capacidad.</h2>
+                <h2>¿Ya sabes qué construir?</h2>
                 <p>
-                  Cada área tiene metodología, entregables y ejemplos propios.
+                  Entra por una capacidad. Si todavía no está claro, entra por
+                  una solución.
                 </p>
               </div>
               <div className="cta-actions">
                 <a className="btn" href="/servicios/strategy-growth.html">
                   Ver estrategia
                 </a>
+                <Link className="btn dark-btn" href="/soluciones">
+                  Ver soluciones
+                </Link>
               </div>
             </div>
           </div>
