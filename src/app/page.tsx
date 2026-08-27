@@ -1,130 +1,68 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HomeCapabilities from "@/components/HomeCapabilities";
+import Link from "next/link";
 
-const focusSteps = [
+const selectedWork = [
   {
-    icon: "↓",
-    title: "Leer",
-    text: "Qué pasa y dónde duele.",
+    number: "W01",
+    name: "Ruta Clara",
+    type: "Sistema de marca + web",
+    status: "Placeholder",
   },
   {
-    icon: "→",
-    title: "Elegir",
-    text: "Qué mover primero.",
+    number: "W02",
+    name: "Casa Lino",
+    type: "Dirección visual + contenido",
+    status: "Placeholder",
   },
   {
-    icon: "✦",
-    title: "Crear",
-    text: "La pieza que falta.",
-  },
-  {
-    icon: "",
-    rotateIcon: true,
-    title: "Lanzar",
-    text: "Sin perder consistencia.",
-  },
-  {
-    icon: "∞",
-    title: "Medir",
-    text: "Qué aprende el sistema.",
+    number: "W03",
+    name: "Pulso",
+    type: "Producto digital + automatización",
+    status: "Placeholder",
   },
 ];
 
-const services = [
-  {
-    label: "Estrategia",
-    title: "Estrategia y crecimiento",
-    text: "Decisiones antes de inversión.",
-    href: "/servicios/strategy-growth.html",
-  },
-  {
-    label: "Marca",
-    title: "Marca y creatividad",
-    text: "Identidad, voz y presencia.",
-    href: "/servicios/brand-creative.html",
-  },
-  {
-    label: "Digital",
-    title: "Experiencias digitales",
-    text: "Webs y productos útiles.",
-    href: "/servicios/digital-experiences.html",
-  },
-  {
-    label: "Inteligencia",
-    title: "Soluciones inteligentes",
-    text: "Automatización aplicada.",
-    href: "/servicios/smart-solutions.html",
-  },
-  {
-    label: "Físico",
-    title: "Marca física",
-    text: "Espacios y puntos reales.",
-    href: "/servicios/physical-brand.html",
-  },
+const problems = [
+  ["La marca se ve menor que el negocio.", "Percepción"],
+  ["La web informa, pero no convierte.", "Conversión"],
+  ["El equipo opera con tareas repetidas.", "Flujo"],
+  ["La experiencia física no acompaña.", "Continuidad"],
 ];
 
-const solutionRoutes = [
-  {
-    step: "Lanzar",
-    title: "Lanzar",
-    chips: ["Marca", "Web", "Contenido"],
-    text: "Marca, web y mensaje mínimo para salir bien.",
-    action: "Descubrir ruta",
-  },
-  {
-    step: "Mejorar",
-    title: "Modernizar",
-    chips: ["Reposicionamiento", "Experiencia", "Ventas"],
-    text: "Presencia actualizada para vender con más confianza.",
-    action: "Explorar ruta",
-  },
-  {
-    step: "Integrar",
-    title: "Integrar",
-    chips: ["Estrategia", "Marca", "Web", "Inteligencia", "Físico"],
-    text: "Marca, web, operación y experiencia bajo una misma lógica.",
-    action: "Ver solución",
-    featured: true,
-  },
-  {
-    step: "Optimizar",
-    title: "Automatizar",
-    chips: ["IA", "Automatización", "Sistemas"],
-    text: "Menos tareas repetidas y más flujo operativo.",
-    action: "Conocer ruta",
-  },
-  {
-    step: "Materializar",
-    title: "Materializar",
-    chips: ["Letreros", "Oficinas", "Vehículos"],
-    text: "Señalética, gráfica y presencia física coherente.",
-    action: "Explorar ruta",
-  },
+const systemSteps = [
+  ["01", "Leer", "Detectar tensión real."],
+  ["02", "Ordenar", "Definir qué mueve valor."],
+  ["03", "Diseñar", "Crear el sistema visible."],
+  ["04", "Conectar", "Unir canales, herramientas y equipo."],
+  ["05", "Evolucionar", "Dejar base para crecer."],
 ];
 
-const clientNeeds = [
-  ["Estoy lanzando algo nuevo.", "Lanzar"],
-  ["La empresa creció, pero la marca no.", "Modernizar"],
-  ["La web no explica ni convierte.", "Digital"],
-  ["El equipo opera con demasiado trabajo manual.", "Automatizar"],
-  ["El espacio físico no representa la marca.", "Materializar"],
+const proofPoints = [
+  "Estrategia + ejecución en un mismo equipo.",
+  "Diseño pensado para uso real, no sólo presentación.",
+  "Sistemas que pueden crecer por etapas.",
 ];
 
-function SectionHeading({
+function SectionTitle({
+  number,
   eyebrow,
   title,
   children,
 }: {
+  number: string;
   eyebrow: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
-    <div className="section-head">
-      <div className="eyebrow">{eyebrow}</div>
+    <div className="e8-section-head">
+      <span className="e8-section-number">{number}</span>
       <div>
+        <p className="e8-eyebrow">{eyebrow}</p>
         <h2>{title}</h2>
-        <p className="lead">{children}</p>
+        <p className="e8-lead">{children}</p>
       </div>
     </div>
   );
@@ -135,186 +73,162 @@ export default function Home() {
     <>
       <Header />
 
-      <main>
-        <header className="hero">
-          <div className="wrap hero-grid">
-            <div className="hero-main">
-              <div>
-                <div className="kicker">Ecosistema creativo y digital</div>
-                <h1>Diseñamos marcas, webs y sistemas para negocios que necesitan avanzar con más foco.</h1>
-              </div>
-              <div className="hero-system" aria-hidden="true">
-                <span>Strategy</span>
-                <span>Brand</span>
-                <span>Web</span>
-                <span>AI</span>
-                <span>Space</span>
-              </div>
-              <div className="hero-copy">
-                <strong>
-                  Elev8 une criterio creativo, diseño digital y ejecución práctica.
-                </strong>
-                <p>
-                  Trabajamos con empresas que necesitan verse mejor, vender mejor
-                  u operar con menos fricción.
-                </p>
-              </div>
-            </div>
-
-            <div className="side">
-              <div className="poster">
-                <div className="poster-inner">
-                  <span className="btn poster-pill">Elev8 Studio</span>
-                  <div className="poster-index" aria-hidden="true">
-                    <span>01</span>
-                    <span>05</span>
-                    <span>∞</span>
-                  </div>
-                  <h2>
-                    Pensar
-                    <br />
-                    Crear
-                    <br />
-                    Escalar
-                  </h2>
-                </div>
-              </div>
-              <div className="mini-card">
-                <p>
-                  Estrategia cuando falta foco. Diseño cuando falta forma.
-                  Tecnología cuando falta flujo.
-                </p>
-                <h3>Menos ruido.</h3>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <div className="ticker" aria-hidden="true">
-          <span>
-            Marca — Web — Automatización — Espacio — Contenido — Estrategia —
-            Marca — Web — Automatización — Espacio — Contenido — Estrategia —
-          </span>
-        </div>
-
-        <section id="modelo">
-          <div className="wrap">
-            <SectionHeading
-              eyebrow="Enfoque"
-              title="Una forma simple de trabajar."
-            >
-              Antes de producir, elegimos qué problema vale la pena resolver.
-            </SectionHeading>
-
-            <div className="logic">
-              {focusSteps.map((step) => (
-                <article className="logic-card" key={step.title}>
-                  <span className="slash">/</span>
-                  <b
-                    className={step.rotateIcon ? "logic-icon-rotate" : undefined}
-                    aria-hidden={step.rotateIcon ? "true" : undefined}
-                  >
-                    {step.icon}
-                  </b>
-                  <div>
-                    <h3>{step.title}</h3>
-                    <p>{step.text}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="servicios" className="dark">
-          <div className="wrap">
-            <SectionHeading
-              eyebrow="Servicios"
-              title="Qué podemos construir."
-            >
-              Cinco capacidades. Se usan solas o combinadas según el caso.
-            </SectionHeading>
-
-            <div className="services">
-              {services.map((service) => (
-                <article className="service" key={service.title}>
-                  <span className="num">{service.label}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                  <a className="service-cta-link" href={service.href}>
-                    Explorar
-                    <span className="arrow" aria-hidden="true" />
-                  </a>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="oferta">
-          <div className="wrap">
-            <SectionHeading
-              eyebrow="Rutas de solución"
-              title="Si no sabes qué pedir, parte por la situación."
-            >
-              Las rutas traducen problemas de negocio en próximos pasos concretos.
-            </SectionHeading>
-
-            <div className="offer-board">
-              {solutionRoutes.map((route) => (
-                <article
-                  className={`offer-card${route.featured ? " offer-feature" : ""}`}
-                  data-step={route.step}
-                  key={route.title}
-                >
-                  {route.featured ? (
-                    <span className="big-number" aria-hidden="true">
-                      360
-                    </span>
-                  ) : null}
-                  <div>
-                    <h3>{route.title}</h3>
-                    <div className="offer-meta">
-                      {route.chips.map((chip) => (
-                        <span className="offer-chip" key={chip}>
-                          {chip}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <p>{route.text}</p>
-                  <div className="offer-action">
-                    <span>{route.action}</span>
-                    <span aria-hidden="true" />
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="rutas">
-          <div className="wrap route">
-            <div className="route-left">
-              <div className="eyebrow">Necesidades del cliente</div>
-              <h2>Reconoce el punto de partida.</h2>
-              <p>
-                Cinco señales comunes. Una conversación posible.
+      <main className="e8-home">
+        <section className="e8-hero" id="inicio">
+          <div className="wrap e8-hero-grid">
+            <div className="e8-hero-copy">
+              <h1>
+                Elevamos cómo{" "}
+                <br />
+                <span className="e8-hero-accent">
+                  tu negocio se ve,{" "}
+                  <br />
+                  funciona y crece.
+                </span>
+              </h1>
+              <p className="e8-hero-support">
+                Unimos estrategia, marca, sitios web, automatización y espacios
+                para ayudarte a avanzar con claridad.
               </p>
+              <div className="e8-actions">
+                <Link className="btn dark-btn" href="/contacto#formulario">
+                  Iniciar proyecto
+                </Link>
+                <a className="btn" href="#trabajo">
+                  Ver proyectos
+                </a>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div className="questions">
-              {clientNeeds.map(([need, route]) => (
-                <div className="q" key={need}>
-                  <span className="mono">•</span>
-                  <strong>“{need}”</strong>
-                  <small>{route}</small>
-                </div>
+        <HomeCapabilities />
+
+        <section className="e8-work" id="trabajo">
+          <div className="wrap">
+            <SectionTitle
+              number="03"
+              eyebrow="Selected Work"
+              title="Trabajo seleccionado, todavía en construcción."
+            >
+              Hasta tener casos reales publicados, usamos proyectos placeholder
+              para diseñar el sistema editorial.
+            </SectionTitle>
+
+            <div className="e8-work-grid">
+              {selectedWork.map((project) => (
+                <article className="e8-work-card" key={project.name}>
+                  <div>
+                    <span>{project.number}</span>
+                    <small>{project.status}</small>
+                  </div>
+                  <h3>{project.name}</h3>
+                  <p>{project.type}</p>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
+        <section className="e8-problems" id="soluciones">
+          <div className="wrap e8-problems-grid">
+            <SectionTitle
+              number="04"
+              eyebrow="Problems / Solutions"
+              title="Entramos por el problema, no por la lista de servicios."
+            >
+              El punto de partida define la arquitectura: marca, web, IA,
+              espacio o una solución integrada.
+            </SectionTitle>
+
+            <div className="e8-problem-list">
+              {problems.map(([problem, signal]) => (
+                <Link href="/soluciones" key={problem}>
+                  <span>{signal}</span>
+                  <strong>{problem}</strong>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="e8-system" id="sistema">
+          <div className="wrap e8-system-grid">
+            <div>
+              <SectionTitle
+                number="05"
+                eyebrow="Elev8 System"
+                title="Un sistema para elevar sin desconectar."
+              >
+                El 8 funciona como método: continuidad entre estrategia,
+                forma, tecnología, operación y experiencia.
+              </SectionTitle>
+            </div>
+
+            <div className="e8-system-steps">
+              {systemSteps.map(([number, title, text]) => (
+                <article key={title}>
+                  <span>{number}</span>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="e8-360" id="proyecto-360">
+          <div className="wrap e8-360-panel">
+            <div>
+              <p className="e8-eyebrow">06 / Proyecto 360</p>
+              <h2>Cuando todo necesita avanzar junto.</h2>
+            </div>
+            <p>
+              Para empresas que necesitan alinear percepción, sitio web,
+              contenido, automatización y presencia física bajo una misma lógica.
+            </p>
+            <Link className="btn" href="/soluciones/proyecto-360.html">
+              Ver ruta 360
+            </Link>
+          </div>
+        </section>
+
+        <section className="e8-proof" id="prueba">
+          <div className="wrap e8-proof-grid">
+            <SectionTitle
+              number="07"
+              eyebrow="Clients / Proof"
+              title="Prueba sobria, hasta tener casos reales."
+            >
+              La confianza no debería depender de claims inflados. Por ahora,
+              mostramos principios verificables.
+            </SectionTitle>
+
+            <div className="e8-proof-list">
+              {proofPoints.map((point) => (
+                <p key={point}>{point}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="e8-final" id="contacto">
+          <div className="wrap e8-final-grid">
+            <div>
+              <p className="e8-eyebrow">08 / Final CTA</p>
+              <h2>Cuéntanos qué necesita elevarse.</h2>
+            </div>
+            <div>
+              <p>
+                No necesitas un brief perfecto. Necesitamos contexto suficiente
+                para detectar la ruta correcta.
+              </p>
+              <Link className="btn dark-btn" href="/contacto#formulario">
+                Iniciar proyecto
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
